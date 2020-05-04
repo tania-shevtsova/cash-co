@@ -5,7 +5,6 @@ const ContainerComponent = (props) => {
   return (
     <Container
       maxWidth="lg"
-      style={{ backgroundColor: "red" }}
       disableGutters={true}
     >
       {props.children}

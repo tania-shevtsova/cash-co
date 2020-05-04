@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import Link from '@material-ui/core/Link';
 import Menu from "@material-ui/core/Menu";
 import SvgIcon from "@material-ui/core/SvgIcon";
 
@@ -24,12 +25,14 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
   const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
+
   return (
-    <AppBar position="static" >
+    <AppBar position="static" style={{backgroundColor: 'inherit'}}>
             <div style={{display: 'flex', direction: "row", justifyContent: 'space-between'}}>
 
       <Container
-        maxWidth="sm"
+        maxWidth="xs"
         disableGutters={true}
         style={{margin: 0}}
       >
@@ -37,7 +40,7 @@ const Navigation = () => {
         <IconButton
           edge="start"
           className={classes.menuButton}
-          color="inherit"
+          style={{color: "#696969"}}
           aria-label="menu"
         >
           <MenuIcon />
@@ -45,15 +48,31 @@ const Navigation = () => {
         </Toolbar>
       </Container>
       <Container
-        maxWidth="xs"
+        maxWidth="md"
         disableGutters={true}
         style={{margin: 0}}
       >
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            News
+          <Typography variant="h6" className={classes.title} style={{color: '#696969'}}> 
+          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}} >
+              NEWS
+              </Link>
+          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}} >
+              ABOUT US
+              </Link>
+              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}}>
+              ABOUT US
+              </Link>
+              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}}>
+              ABOUT US
+              </Link>
+              <Link href="#" onClick={preventDefault} style={{color: '#696969'}} >
+              ABOUT US
+              </Link>
+           
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button style={{color: '#696969'}}>Sign in</Button>
+          <Button style={{color: '#696969'}}>Sign up</Button>
         </Toolbar>
       </Container>
       </div>
