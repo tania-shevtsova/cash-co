@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -10,6 +10,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Link from '@material-ui/core/Link';
 import Menu from "@material-ui/core/Menu";
 import SvgIcon from "@material-ui/core/SvgIcon";
+import './Navigation.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,11 +26,27 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
+  const preventDefault = (e) => e.preventDefault();
+  const [isSticky, setSticky]=useState(false);
+  const ref=useRef(null);
+  const handleScroll=()=>{
+      if(ref.current){
+          setSticky(ref.current.getBoundingClientRect().top<=0)
+      }
+  };
+
+  useEffect(()=>{
+      window.addEventListener('scroll', handleScroll);
+      return ()=>{
+          window.removeEventListener('scroll', ()=>handleScroll)
+      }
+  }, []);
 
   return (
-    <AppBar position="static" style={{backgroundColor: 'inherit'}}>
+      <div className={`sticky-wrapper${isSticky? 'sticky': ''}`}>
+    <AppBar style={{backgroundColor: '#fff'}} className='menu-sticky' ref={ref}>
             <div style={{display: 'flex', direction: "row", justifyContent: 'space-between'}}>
+
 
       <Container
         maxWidth="xs"
@@ -77,6 +94,7 @@ const Navigation = () => {
       </Container>
       </div>
     </AppBar>
+    </div>
 
  
   );

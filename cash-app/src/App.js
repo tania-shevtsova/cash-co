@@ -7,8 +7,9 @@ function App() {
   return (
     <Container>
       <Navigation/>
+      <h2 style={{position: 'relative', zIndex: 1223}}>CASH APP</h2>
       <Background />
-    <h2>CASH APP</h2>
+   
     </Container>
   );
 }
