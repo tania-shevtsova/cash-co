@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   title: {
     flexGrow: 1,
@@ -34,6 +34,11 @@ const Navigation = () => {
           setSticky(ref.current.getBoundingClientRect().top<=0)
       }
   };
+
+  const [isActive, setActive]=useState('inactive');
+  const [isActiveSignIn, setActiveSignIn]=useState('inactive');
+
+
 
   useEffect(()=>{
       window.addEventListener('scroll', handleScroll);
@@ -71,25 +76,29 @@ const Navigation = () => {
       >
         <Toolbar>
           <Typography variant="h6" className={classes.title} style={{color: '#696969'}}> 
-          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}} >
+          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30, fontSize: 15}} >
               NEWS
               </Link>
-          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}} >
+          <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30, fontSize: 15}} >
               ABOUT US
               </Link>
-              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}}>
+              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30, fontSize: 15}}>
               ABOUT US
               </Link>
-              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30}}>
+              <Link href="#" onClick={preventDefault} style={{color: '#696969', marginRight: 30, fontSize: 15}}>
               ABOUT US
               </Link>
-              <Link href="#" onClick={preventDefault} style={{color: '#696969'}} >
+              <Link href="#" onClick={preventDefault} style={{color: '#696969', fontSize: 15}} >
               ABOUT US
               </Link>
            
           </Typography>
-          <Button style={{color: '#696969'}}>Sign in</Button>
-          <Button style={{color: '#696969'}}>Sign up</Button>
+          {/* <div style={{backgroundColor: isActive}}>
+          <button  onClick={()=>{setActive('#696969')}} >SIGN IN</button>
+          <button   onClick={()=>{setActiveSignIn('aqua')}} >SIGN UP</button>
+          </div> */}
+          <button onClick={(e)=>{e.preventDefault(); setActiveSignIn(!isActiveSignIn)}} className={`  ${isActiveSignIn?'active' : 'inactive'} nav-btn`}>SIGN IN</button>
+          <button onClick={()=>{setActiveSignIn(!isActiveSignIn)}} className={` ${isActiveSignIn?'inactive' : 'active'} nav-btn `}>SIGN UP</button>
         </Toolbar>
       </Container>
       </div>
