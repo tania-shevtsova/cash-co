@@ -12,8 +12,7 @@ import Link from "@material-ui/core/Link";
 // import Menu from "@material-ui/core/Menu";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import "./Navigation.css";
-import {StyledMenu} from '../menu/Menu.styled';
-
+import { StyledMenu } from "../menu/Menu.styled";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +42,9 @@ const Navigation = (props) => {
 
   const handleToggle = (e) => {
     e.preventDefault();
+
     setActiveSignIn(e.target.className.includes("nav-btn1"));
+    
   };
 
   useEffect(() => {
@@ -53,10 +54,34 @@ const Navigation = (props) => {
     };
   }, []);
 
+  // const [open, setOpen]=useState(false);
+  // const handleDisableScroll = () => {
+  //     setOpen(!open);
+  //     document.body.style.overflow = 'hidden'
+      
+  //   // if(!open)
+    
+  //   //   document.body.style.overflow = 'unset'
+    
+  // };
+
+//   useEffect(() => {
+//     ref.current.addEventListener("click", handleDisableScroll);
+//     return () => {
+//       ref.current.removeEventListener("click", () => handleDisableScroll);
+//     };
+//     setOpen(!open);
+//         document.body.style.overflow = 'hidden';
+//         document.body.style.position='fixed'
+//       if(!open)
+      
+//       return ()=> { setOpen(false); document.body.removeAttribute('style')} 
+
+//  }, []);
+
   return (
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <AppBar
-     
         style={{ backgroundColor: "#fff" }}
         className="menu-sticky"
         ref={ref}
@@ -68,55 +93,68 @@ const Navigation = (props) => {
             justifyContent: "space-between",
           }}
         >
-
-<Menu {...props}>
-<Typography
-                variant="h6"
-                className={classes.title}
-                style={{  color: '#fff' }}
+          {console.log(props.open)}
+          <Menu  onStateChange={()=>props.setOpen(!props.open)}
+            {...props} open={props.open} style={`{${props.open ? document.body.style.overflow='hidden' : document.body.style.overflow='visible'}}`} className={`${props.open ? 'disable' : 'default'}`}
+              // props.setOpen(!props.open);
+              // console.log(window)
+              // this.windowOffset = window.scrollY;
+              // document.body.setAttribute(
+              //   "style",
+              //   `position: fixed; top: -${this.windowOffset}px; left: 0; right: 0`
+              // );
+            
+          >
+            <Typography
+              variant="h6"
+              className={classes.title}
+              style={{ color: "#fff" }}
+            >
+              <Link
+                href="#"
+                onClick={preventDefault}
+                style={{
+                  paddingTop: 15,
+                  fontSize: 15,
+                  color: "#fff",
+                  display: "block",
+                }}
               >
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-
-                  style={{ paddingTop: 15,  fontSize: 15, color: '#fff', display: 'block' }}
-                >
-                  NEWS
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff',fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff', fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff', fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: '#fff', fontSize: 15, display: 'block'}}
-                >
-                  ABOUT US
-                </Link>
-              
+                NEWS
+              </Link>
+              <Link
+                href="#"
+                onClick={preventDefault}
+                style={{ color: "#fff", fontSize: 15, display: "block" }}
+              >
+                ABOUT US
+              </Link>
+              <Link
+                href="#"
+                onClick={preventDefault}
+                style={{ color: "#fff", fontSize: 15, display: "block" }}
+              >
+                ABOUT US
+              </Link>
+              <Link
+                href="#"
+                onClick={preventDefault}
+                style={{ color: "#fff", fontSize: 15, display: "block" }}
+              >
+                ABOUT US
+              </Link>
+              <Link
+                href="#"
+                onClick={preventDefault}
+                style={{ color: "#fff", fontSize: 15, display: "block" }}
+              >
+                ABOUT US
+              </Link>
 
               <button
                 onClick={handleToggle}
                 className={`${
-                  isActiveSignIn? "active" : "inactive"
+                  isActiveSignIn ? "active" : "inactive"
                 } nav-btn1 `}
               >
                 SIGN IN
@@ -124,20 +162,17 @@ const Navigation = (props) => {
               <button
                 onClick={handleToggle}
                 className={`${
-                  isActiveSignIn? "inactive" : "active"
+                  isActiveSignIn ? "inactive" : "active"
                 } nav-btn2 `}
               >
                 SIGN UP
               </button>
-              </Typography>
-             
-</Menu>
+            </Typography>
+          </Menu>
 
-
-
-{/* <StyledMenu open={open}> */}
-  {/* <div className='layer'> */}
-             {/* <Typography
+          {/* <StyledMenu open={open}> */}
+          {/* <div className='layer'> */}
+          {/* <Typography
                 variant="h6"
                 className={classes.title}
                 style={{  color: '#fff' }}
@@ -198,10 +233,10 @@ const Navigation = (props) => {
               </button>
               </Typography>
               */}
-              {/* </div> */}
-              {/* </StyledMenu> */}
+          {/* </div> */}
+          {/* </StyledMenu> */}
           {/* <Container maxWidth="xs" disableGutters={true} style={{ margin: 0 }}> */}
-            {/* <Toolbar>
+          {/* <Toolbar>
               <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -214,7 +249,7 @@ const Navigation = (props) => {
           {/* </Container> */}
           {/* <Container maxWidth="md" disableGutters={true} style={{ margin: 0 }}>
             <Toolbar> */}
-              {/* <Typography
+          {/* <Typography
                 variant="h6"
                 className={classes.title}
                 style={{ color: "#696969" }}
@@ -255,7 +290,7 @@ const Navigation = (props) => {
                   ABOUT US
                 </Link>
               </Typography> */}
-              {/* <button
+          {/* <button
                 onClick={handleToggle}
                 className={`${
                   isActiveSignIn? "active" : "inactive"
@@ -271,10 +306,9 @@ const Navigation = (props) => {
               >
                 SIGN UP
               </button> */}
-            {/* </Toolbar>
+          {/* </Toolbar>
           </Container> */}
         </div>
-      
       </AppBar>
     </div>
   );

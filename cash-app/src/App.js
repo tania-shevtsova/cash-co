@@ -13,7 +13,7 @@ function App() {
   <div id='App'>
       {/* <Burger open={open} setOpen={setOpen}/>
       <Menu open={open} setOpen={setOpen}/> */}
-      <Navigation pageWrapId={'page wrap'} outerContainerId={"App"}/>
+      <Navigation open={open} setOpen={setOpen} pageWrapId={'page wrap'} outerContainerId={"App"}/>
    <div id='page-wrap'>
       <h2 style={{position: 'relative', zIndex: 10, left: '50%', paddingTop: '3%'}}>CASH APP</h2>
       <Background />
