@@ -8,7 +8,7 @@ const Background = () => {
       <>
     <div className='wrapper'>
       <div className='parallax-img one'></div>
-      <Typography variant="body1">
+      <Typography variant="body1" style={{overflowY: 'hidden', textOverflow: 'ellipsis'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -70,7 +70,7 @@ const Background = () => {
  
     <div className='wrapper'>
     <div className='parallax-img two'></div>
-    <Typography variant="body1">
+    <Typography variant="body1" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -131,7 +131,7 @@ const Background = () => {
 
     <div className='wrapper'>
     <div className='parallax-img three'></div>
-    <Typography variant="body1">
+    <Typography variant="body1" style={{overflow: 'hidden'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
