@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from './components/container/Container'
 import css from './App.css';
 import Navigation from './components/navigation/Navigation';
 import Background from './components/background/Background';
+import Burger from './components/burger/Burger';
+import Menu from './components/menu/Menu';
 function App() {
+  const [open, setOpen]=useState(false);
   return (
     <Container>
-      <Navigation/>
-      <h2 style={{position: 'relative', zIndex: 1223}}>CASH APP</h2>
+     
+  <div>
+      <Burger open={open} setOpen={setOpen}/>
+      {/* <Menu open={open} setOpen={setOpen}/> */}
+      <Navigation open={open} setOpen={setOpen}/>
+      </div>
+      <h2 style={{position: 'relative', zIndex: 120, left: '50%', paddingTop: '3%'}}>CASH APP</h2>
       <Background />
    
     </Container>

@@ -1,31 +1,36 @@
 .wrapper {
-    height: 100vh;
-  }
+  height: 100vh;
+}
 
-.parallax-img{
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vmax;
-  /* z-index: -1;
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1280px) {
+  .parallax-img {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vmax;
+    /* z-index: -1;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%,0);
   pointer-events: none; */
-  /* background-image: url('../../images-background/car-repair-362150_1920.jpg'); */
-}
-
-.one {
-    background-image: url('../../images-background/car-repair-362150_1920.jpg');
+    /* background-image: url('../../images-background/car-repair-362150_1920.jpg'); */
   }
 
-.two {
-    background-image: url('../../images-background/jeep-4640909_1920.jpg');
-}
+  .one {
+    background-image: url("../../images-background/car-repair-362150_1920.jpg");
+  }
 
-.three{
-    background-image: url('../../images-background/motor-1185748_1920.jpg');
+  .two {
+    background-image: url("../../images-background/jeep-4640909_1920.jpg");
+  }
+
+  .three {
+    background-image: url("../../images-background/motor-1185748_1920.jpg");
+  }
 }
