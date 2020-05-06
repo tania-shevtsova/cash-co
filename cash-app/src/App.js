@@ -10,14 +10,15 @@ function App() {
   return (
     <Container>
      
-  <div>
-      <Burger open={open} setOpen={setOpen}/>
-      {/* <Menu open={open} setOpen={setOpen}/> */}
-      <Navigation open={open} setOpen={setOpen}/>
-      </div>
-      <h2 style={{position: 'relative', zIndex: 120, left: '50%', paddingTop: '3%'}}>CASH APP</h2>
+  <div id='App'>
+      {/* <Burger open={open} setOpen={setOpen}/>
+      <Menu open={open} setOpen={setOpen}/> */}
+      <Navigation pageWrapId={'page wrap'} outerContainerId={"App"}/>
+   <div id='page-wrap'>
+      <h2 style={{position: 'relative', zIndex: 10, left: '50%', paddingTop: '3%'}}>CASH APP</h2>
       <Background />
-   
+      </div>
+      </div>
     </Container>
   );
 }
