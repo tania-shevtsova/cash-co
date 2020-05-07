@@ -36,6 +36,7 @@ img {
 .bm-item {
   display: inline-block;
 
+  outline: none;
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
@@ -46,6 +47,10 @@ img {
 /* Change color on hover */
 .bm-item:hover {
   color: white;
+}
+
+div.bm-menu-wrap.disable {
+  width: 270px !important; 
 }
 
 /* The rest copied directly from react-burger-menu docs */
