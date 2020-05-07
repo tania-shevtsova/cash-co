@@ -1,0 +1,123 @@
+
+
+/* 
+@media (min-width: 768px) {
+} */
+
+/* @media (min-width: 1280px) { */
+
+.sticky-wrapper {
+    position: relative;
+    height: 30px;
+  }
+
+.sticky .menu-sticky {
+    position: fixed;
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+   .disable {
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .default{
+    overflow: visible;
+    /* position: absolute; */
+   
+  }
+
+  .nav-btn1{
+    /* background: #696969; */
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-top: 30px;
+    margin-right:  15px;
+  }
+  .nav-btn2{
+    /* background: #696969; */
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-top: 30px;
+    margin-left:  5px;
+  }
+
+
+  .active{
+    background: #696969;
+    color: #fff;
+  }
+
+  .inactive{
+    color: #696969;
+    background: #fff;
+  }
+
+  .nav-btn:hover{
+    /* background: #696969;
+    color: #fff; */
+    cursor: pointer;
+  }
+
+  .MuiButtonBase-root{
+    background-color: '#696969';
+    color: #fff;
+  }
+
+  a.MuiLink-root{
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  /* a.MuiLink-root:first-child {
+    padding-top: 15px;
+    
+  } */
+
+  a.MuiLink-root:first-child::before{
+    position: relative;
+    display: block;
+    content: "";
+    width: 214px;
+    height: 1px;
+    background-color: rgba(236, 235, 235, 0.08);
+    z-index: 134;
+    margin-bottom: 13px;
+    padding: 0;
+  }
+
+  a.MuiLink-root::after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 214px;
+    height: 1px;
+    background-color: rgba(236, 235, 235, 0.08);
+    z-index: 134;
+    margin-top: 13px;
+  }
+/* } */

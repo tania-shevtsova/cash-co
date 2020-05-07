@@ -82,7 +82,7 @@ const Navigation = (props) => {
   return (
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <AppBar
-        style={{ backgroundColor: "#fff", zIndex: 12 }}
+        style={{ backgroundColor: "#fff",  height: 60}}
         className="menu-sticky"
         ref={ref}
       >
@@ -93,7 +93,6 @@ const Navigation = (props) => {
             justifyContent: "space-between",
           }}
         >
-          {console.log(props.open)}
           <Menu  onStateChange={()=>props.setOpen(!props.open)}
             {...props} open={props.open} style={`{${props.open ? document.body.style.overflow='hidden' : document.body.style.overflow='visible'}}`} className={`${props.open ? 'disable' : 'default'}`}
               // props.setOpen(!props.open);
