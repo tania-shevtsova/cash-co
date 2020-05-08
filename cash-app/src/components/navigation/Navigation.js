@@ -31,6 +31,9 @@ const Navigation = (props) => {
   const preventDefault = (e) => e.preventDefault();
   const [isSticky, setSticky] = useState(false);
   const ref = useRef(null);
+  const refBtn = useRef(null);
+  const refBtn2 = useRef(null);
+
   const handleScroll = () => {
     if (ref.current) {
       setSticky(ref.current.getBoundingClientRect().top <= 0);
@@ -39,6 +42,7 @@ const Navigation = (props) => {
 
   let [isActiveSignIn, setActiveSignIn] = useState("inactive");
   const [isActive, setActive] = useState("inactive");
+  const [isClicked, setClicked] = useState(false);
 
   const handleToggle = (e) => {
     e.preventDefault();
@@ -92,9 +96,12 @@ const Navigation = (props) => {
             direction: "row",
             justifyContent: "space-between",
           }}
+          // refbtn2={refBtn2}
+          className='newDiv'
         >
-          <Menu  onStateChange={()=>props.setOpen(!props.open)}
-            {...props} open={props.open} style={`{${props.open ? document.body.style.overflow='hidden' : document.body.style.overflow='visible'}}`} className={`${props.open ? 'disable' : 'default'}`}
+        <div className={`${props.open ? 'overlay' : ''} && ${isClicked ? 'hidden' : ''}`}>
+          <Menu noOverlay onStateChange={()=>props.setOpen(!props.open)} ref={refBtn}
+            {...props} open={props.open} style={`{${props.open ? document.body.style.overflow='hidden' : document.body.style.overflow='visible'}}`} className={`${props.open ? 'disable' : 'default'} && ${isClicked ? 'hidden' : ''}`}
               // props.setOpen(!props.open);
               // console.log(window)
               // this.windowOffset = window.scrollY;
@@ -104,14 +111,22 @@ const Navigation = (props) => {
               // );
             
           >
+             {/* {(refBtn.current !== null) &&  console.log(refBtn)}} */}
             <Typography
               variant="h6"
               className={classes.title}
               style={{ color: "#fff" }}
             >
               <Link
-                href="#"
-                onClick={preventDefault}
+                href="#news"
+                onClick={()=>{setClicked(!isClicked)}}
+             
+                //   {  window.scroll({
+                //   top: 300, 
+                //   left: 0, 
+                //   behavior: 'smooth'
+                // });}
+              
               >
                 NEWS
               </Link>
@@ -158,6 +173,7 @@ const Navigation = (props) => {
               </button>
             </Typography>
           </Menu>
+          </div>
 
           {/* <StyledMenu open={open}> */}
           {/* <div className='layer'> */}

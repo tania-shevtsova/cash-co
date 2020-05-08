@@ -8,7 +8,7 @@ const Background = () => {
       <>
     <div className='wrapper'>
       <div className='parallax-img one'></div>
-      <Typography variant="body1" style={{overflowY: 'hidden', textOverflow: 'ellipsis'}}>
+      <span id='news' variant="body1" style={{overflowY: 'hidden', textOverflow: 'ellipsis', zIndex: 1250}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -63,7 +63,7 @@ const Background = () => {
         tenetur dignissimos rerum voluptatibus iste dolorum cumque nobis. Ab
         similique officiis neque iure quisquam, tenetur quis doloribus
         consectetur veritatis dignissimos voluptates provident necessitatibus
-        </Typography>
+        </span>
     </div>
     <div className='wrapper'></div>
     
