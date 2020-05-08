@@ -18,15 +18,7 @@ function App() {
           pageWrapId={"page wrap"}
           outerContainerId={"App"}
         />
-          <h2
-            style={{
-              position: "relative",
-              zIndex: 120,
-              left: "50%",
-            }}
-          >
-            CASH APP
-          </h2>
+         
           <Background />
         </div>
       </div>

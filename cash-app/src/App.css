@@ -58,11 +58,13 @@ div.bm-menu-wrap.disable {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: sticky;
   width: 30px;
   height: 24px;
   left: 36px;
   top: 5%;
+  margin-left: 100%;
+  margin-top: 60%;
 }
 
 div.bm-burger-button > button {

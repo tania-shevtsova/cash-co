@@ -57,67 +57,42 @@ const Navigation = (props) => {
       window.removeEventListener("scroll", () => handleScroll);
     };
   }, []);
-
-  // const [open, setOpen]=useState(false);
-  // const handleDisableScroll = () => {
-  //     setOpen(!open);
-  //     document.body.style.overflow = 'hidden'
-      
-  //   // if(!open)
-    
-  //   //   document.body.style.overflow = 'unset'
-    
-  // };
-
-//   useEffect(() => {
-//     ref.current.addEventListener("click", handleDisableScroll);
-//     return () => {
-//       ref.current.removeEventListener("click", () => handleDisableScroll);
-//     };
-//     setOpen(!open);
-//         document.body.style.overflow = 'hidden';
-//         document.body.style.position='fixed'
-//       if(!open)
-      
-//       return ()=> { setOpen(false); document.body.removeAttribute('style')} 
-
-//  }, []);
 const [open, setOpen] = useState(false);
   return (
+    <div className='main-nav-wrapper'>
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
+      <section className='section-content'> <h3>Lorem, ipsum dolor sit !</h3></section>
       <AppBar
-        style={{ backgroundColor: "#fff",  height: 60}}
+        style={{ backgroundColor: "inherit",  height: 60}}
         className="menu-sticky"
         ref={ref}
       >
+         <h2
+            style={{
+              position: "absolute",
+              zIndex: 120,
+              left: "50%",
+              top: '28%',
+              color: 'red'
+            }}
+          >
+            CASH APP
+          </h2>
+         
         <div
           style={{
             display: "flex",
             direction: "row",
             justifyContent: "space-between",
           }}
-          // refbtn2={refBtn2}
           className='newDiv'
         >
 
           <Menu  
           onStateChange={(state)=>setOpen(state.isOpen)} 
-            // {...props} open={props.open} 
             isOpen={open} 
-            // && ${isClicked ? 'hidden' : ''}
-            // && ${isClicked ? 'hidden' : ''}
-              // props.setOpen(!props.open);
-              // console.log(window)
-              // this.windowOffset = window.scrollY;
-              // document.body.setAttribute(
-              //   "style",
-              //   `position: fixed; top: -${this.windowOffset}px; left: 0; right: 0`
-              // );
             
           >
-                  
-             
-             {/* {(refBtn.current !== null) &&  console.log(refBtn)}} */}
             <Typography
               variant="h6"
               className={classes.title}
@@ -127,11 +102,6 @@ const [open, setOpen] = useState(false);
                 href="#news"
                 onClick={()=>setOpen(false)}
              
-                //   {  window.scroll({
-                //   top: 300, 
-                //   left: 0, 
-                //   behavior: 'smooth'
-                // });}
               
               >
                 NEWS
@@ -179,149 +149,12 @@ const [open, setOpen] = useState(false);
               </button>
             </Typography>
           </Menu>
-          {/* <div className={`${props.open ? 'overlay' : ''} && ${isClicked ? 'dn' : ''}`}></div> */}
-          
+         
+         
 
-          {/* <StyledMenu open={open}> */}
-          {/* <div className='layer'> */}
-          {/* <Typography
-                variant="h6"
-                className={classes.title}
-                style={{  color: '#fff' }}
-              >
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-
-                  style={{ paddingTop: 15,  fontSize: 15, color: '#fff', display: 'block' }}
-                >
-                  NEWS
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff',fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff', fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{  color: '#fff', fontSize: 15, display: 'block' }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: '#fff', fontSize: 15, display: 'block'}}
-                >
-                  ABOUT US
-                </Link>
-              
-
-              <button
-                onClick={handleToggle}
-                className={`${
-                  isActiveSignIn? "active" : "inactive"
-                } nav-btn1 `}
-              >
-                SIGN IN
-              </button>
-              <button
-                onClick={handleToggle}
-                className={`${
-                  isActiveSignIn? "inactive" : "active"
-                } nav-btn2 `}
-              >
-                SIGN UP
-              </button>
-              </Typography>
-              */}
-          {/* </div> */}
-          {/* </StyledMenu> */}
-          {/* <Container maxWidth="xs" disableGutters={true} style={{ margin: 0 }}> */}
-          {/* <Toolbar>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                style={{ color: "#696969" }}
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-            </Toolbar> */}
-          {/* </Container> */}
-          {/* <Container maxWidth="md" disableGutters={true} style={{ margin: 0 }}>
-            <Toolbar> */}
-          {/* <Typography
-                variant="h6"
-                className={classes.title}
-                style={{ color: "#696969" }}
-              >
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: "#696969", marginRight: 30, fontSize: 15 }}
-                >
-                  NEWS
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: "#696969", marginRight: 30, fontSize: 15 }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: "#696969", marginRight: 30, fontSize: 15 }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: "#696969", marginRight: 30, fontSize: 15 }}
-                >
-                  ABOUT US
-                </Link>
-                <Link
-                  href="#"
-                  onClick={preventDefault}
-                  style={{ color: "#696969", fontSize: 15 }}
-                >
-                  ABOUT US
-                </Link>
-              </Typography> */}
-          {/* <button
-                onClick={handleToggle}
-                className={`${
-                  isActiveSignIn? "active" : "inactive"
-                } nav-btn1 `}
-              >
-                SIGN IN
-              </button>
-              <button
-                onClick={handleToggle}
-                className={`${
-                  isActiveSignIn? "inactive" : "active"
-                } nav-btn2 `}
-              >
-                SIGN UP
-              </button> */}
-          {/* </Toolbar>
-          </Container> */}
         </div>
       </AppBar>
+    </div>
     </div>
   );
 };

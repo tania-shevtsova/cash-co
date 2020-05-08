@@ -6,6 +6,12 @@
 
 /* @media (min-width: 1280px) { */
 
+  .main-nav-wrapper{
+    background-color: #f0f1f4;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
 .sticky-wrapper {
     position: relative;
     height: 30px;
@@ -14,6 +20,14 @@
   html {
     scroll-behavior: smooth;
   }
+
+  .section-content{
+    padding-top: 60%;
+    position: relative;
+   padding-right: 20%;
+   color: #696969;
+  }
+
   
 .sticky .menu-sticky {
     position: fixed;
@@ -37,21 +51,7 @@
   }
 
 
-  /* div.bm-overlay{
-    opacity: 0 !important;
-  } */
-
-  .hidden {
-    /* display: none; */
-    overflow: visible !important;
-    display: none !important;
   
-  }
-
-  .dn{
-    display: none;
-    overflow: visible !important;
-  }
 
   .nav-btn1{
     /* background: #696969; */
@@ -111,6 +111,10 @@
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .MuiAppBar-root{
+    z-index: 1000;
   }
 
   a.MuiLink-root{
