@@ -31,6 +31,7 @@
 
   .default{
     overflow: visible;
+    display: initial;
     /* position: absolute; */
    
   }
@@ -43,8 +44,13 @@
   .hidden {
     /* display: none; */
     overflow: visible !important;
-    opacity: 0 !important;
+    display: none !important;
   
+  }
+
+  .dn{
+    display: none;
+    overflow: visible !important;
   }
 
   .nav-btn1{

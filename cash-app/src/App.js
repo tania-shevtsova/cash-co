@@ -6,7 +6,7 @@ import Background from "./components/background/Background";
 import Burger from "./components/burger/Burger";
 import Menu from "./components/menu/Menu";
 function App() {
-  const [open, setOpen] = useState(false);
+
   return (
     <div className="wrapper">
       <div id="App">
@@ -15,15 +15,13 @@ function App() {
     
         <div id="page-wrap">
         <Navigation
-          open={open}
-          setOpen={setOpen}
           pageWrapId={"page wrap"}
           outerContainerId={"App"}
         />
           <h2
             style={{
               position: "relative",
-              zIndex: 1200,
+              zIndex: 120,
               left: "50%",
             }}
           >

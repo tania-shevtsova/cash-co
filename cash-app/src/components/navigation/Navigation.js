@@ -82,7 +82,7 @@ const Navigation = (props) => {
 //       return ()=> { setOpen(false); document.body.removeAttribute('style')} 
 
 //  }, []);
-
+const [open, setOpen] = useState(false);
   return (
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <AppBar
@@ -99,9 +99,13 @@ const Navigation = (props) => {
           // refbtn2={refBtn2}
           className='newDiv'
         >
-        <div className={`${props.open ? 'overlay' : ''} && ${isClicked ? 'hidden' : ''}`}>
-          <Menu noOverlay onStateChange={()=>props.setOpen(!props.open)} ref={refBtn}
-            {...props} open={props.open} style={`{${props.open ? document.body.style.overflow='hidden' : document.body.style.overflow='visible'}}`} className={`${props.open ? 'disable' : 'default'} && ${isClicked ? 'hidden' : ''}`}
+
+          <Menu  
+          onStateChange={(state)=>setOpen(state.isOpen)} 
+            // {...props} open={props.open} 
+            isOpen={open} 
+            // && ${isClicked ? 'hidden' : ''}
+            // && ${isClicked ? 'hidden' : ''}
               // props.setOpen(!props.open);
               // console.log(window)
               // this.windowOffset = window.scrollY;
@@ -111,6 +115,8 @@ const Navigation = (props) => {
               // );
             
           >
+                  
+             
              {/* {(refBtn.current !== null) &&  console.log(refBtn)}} */}
             <Typography
               variant="h6"
@@ -119,7 +125,7 @@ const Navigation = (props) => {
             >
               <Link
                 href="#news"
-                onClick={()=>{setClicked(!isClicked)}}
+                onClick={()=>setOpen(false)}
              
                 //   {  window.scroll({
                 //   top: 300, 
@@ -173,7 +179,8 @@ const Navigation = (props) => {
               </button>
             </Typography>
           </Menu>
-          </div>
+          {/* <div className={`${props.open ? 'overlay' : ''} && ${isClicked ? 'dn' : ''}`}></div> */}
+          
 
           {/* <StyledMenu open={open}> */}
           {/* <div className='layer'> */}
