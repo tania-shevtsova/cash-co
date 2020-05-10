@@ -7,6 +7,7 @@ const Background = () => {
   return (
       <>
     <div className='wrapper'>
+      <h2>WHAT WE DO</h2>
       <div className='parallax-img one'></div>
       <span id='news' variant="body1" style={{overflowY: 'hidden', textOverflow: 'ellipsis', zIndex: 1250}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -69,8 +70,9 @@ const Background = () => {
     
  
     <div className='wrapper'>
+    <h2>WHY US</h2>
     <div className='parallax-img two'></div>
-    <Typography variant="body1" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
+    <span id='about-us' variant="body1" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -83,6 +85,9 @@ const Background = () => {
         mollitia beatae. Culpa illum quod ex maiores, sint possimus corporis
         minima, beatae modi laudantium iusto dolorem doloremque quibusdam dolor
         alias architecto recusandae blanditiis obcaecati quas molestias!
+        </span>
+
+        <span id='about-us2' variant="body1" style={{overflow: 'hidden'}}>
         Distinctio illo repudiandae, nam ipsam corrupti, est iste cum ut
         expedita ipsa eveniet sequi blanditiis id vero a. Pariatur facere
         praesentium tempora soluta animi quibusdam enim magnam totam cumque
@@ -125,13 +130,14 @@ const Background = () => {
         tenetur dignissimos rerum voluptatibus iste dolorum cumque nobis. Ab
         similique officiis neque iure quisquam, tenetur quis doloribus
         consectetur veritatis dignissimos voluptates provident necessitatibus
-        </Typography>
+        </span>
     </div>
     <div className='wrapper'></div>
 
     <div className='wrapper'>
+    <h2>WHY US</h2>
     <div className='parallax-img three'></div>
-    <Typography variant="body1" style={{overflow: 'hidden'}}>
+    <span id='about-us3' variant="body1" style={{overflow: 'hidden'}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -159,6 +165,9 @@ const Background = () => {
         Deleniti, harum minima. Similique cumque, nihil sapiente ad molestias
         laboriosam, laborum nesciunt sit odio, suscipit iste iusto est. Nesciunt
         ipsam iure quae autem maxime laboriosam. Consequuntur, qui at.
+        </span>
+
+        <span id='about-us4' variant="body1" style={{overflow: 'hidden'}}>
         Repudiandae cupiditate adipisci labore a qui illo maiores modi
         consectetur temporibus distinctio culpa, incidunt id. Repellendus
         laudantium incidunt eveniet nisi? Cupiditate consectetur qui ad eius
@@ -186,7 +195,7 @@ const Background = () => {
         tenetur dignissimos rerum voluptatibus iste dolorum cumque nobis. Ab
         similique officiis neque iure quisquam, tenetur quis doloribus
         consectetur veritatis dignissimos voluptates provident necessitatibus
-        </Typography>
+        </span>
     </div>
     <div className='wrapper'></div>
     </>

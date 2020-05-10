@@ -1,18 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import { slide as Menu } from "react-burger-menu";
-import Container from "@material-ui/core/Container";
+import {FaArrowCircleUp} from 'react-icons/fa';
+// import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+// import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Link from "@material-ui/core/Link";
+// import Button from "@material-ui/core/Button";
+// import IconButton from "@material-ui/core/IconButton";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import Link from "@material-ui/core/Link";
 // import Menu from "@material-ui/core/Menu";
-import SvgIcon from "@material-ui/core/SvgIcon";
+// import SvgIcon from "@material-ui/core/SvgIcon";
 import "./Navigation.css";
-import { StyledMenu } from "../menu/Menu.styled";
+// import { StyledMenu } from "../menu/Menu.styled";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,8 +33,6 @@ const Navigation = (props) => {
   const preventDefault = (e) => e.preventDefault();
   const [isSticky, setSticky] = useState(false);
   const ref = useRef(null);
-  const refBtn = useRef(null);
-  const refBtn2 = useRef(null);
 
   const handleScroll = () => {
     if (ref.current) {
@@ -41,8 +41,6 @@ const Navigation = (props) => {
   };
 
   let [isActiveSignIn, setActiveSignIn] = useState("inactive");
-  const [isActive, setActive] = useState("inactive");
-  const [isClicked, setClicked] = useState(false);
 
   const handleToggle = (e) => {
     e.preventDefault();
@@ -58,10 +56,39 @@ const Navigation = (props) => {
     };
   }, []);
 const [open, setOpen] = useState(false);
+
+const [isVisible, setVisible] = useState(false);
+
+useEffect(() => {
+  window.addEventListener("scroll", toggleVisibility);
+  return () => {
+    window.removeEventListener("scroll", () => toggleVisibility);
+  };
+}, []);
+const toggleVisibility=()=>{
+  console.log(window.pageYOffset)
+  if (window.pageYOffset > 50) {
+    setVisible(true);
+  } else {
+    setVisible(false);
+  }
+}
+
+const scrollToTop=()=>{
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+  // window.getElementsByTagName('html', 'body').animate({scrollTop: 0}, 100)
+}
   return (
     <div className='main-nav-wrapper'>
+      {isVisible && <FaArrowCircleUp 
+   className="return-to-top" 
+   onClick={scrollToTop} 
+   style={{height: 40, display:'flex'}}
+/>}
+      {/* {isVisible && (<button className='return-to-top' onClick={scrollToTop}> <span className='arrow-up glyphicon glyphicon-chevron-up'></span> </button>)} */}
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <section className='section-content'> <h3>Lorem, ipsum dolor sit !</h3></section>
+
       <AppBar
         style={{ backgroundColor: "inherit",  height: 60}}
         className="menu-sticky"
@@ -98,38 +125,43 @@ const [open, setOpen] = useState(false);
               className={classes.title}
               style={{ color: "#fff" }}
             >
-              <Link
+              <AnchorLink
+              className='link'
                 href="#news"
-                onClick={()=>setOpen(false)}
+                onClick={()=>{setOpen(false)}}
              
               
               >
                 NEWS
-              </Link>
-              <Link
-                href="#"
-                onClick={preventDefault}
+              </AnchorLink>
+              <AnchorLink
+               className='link'
+                href="#about-us"
+                onClick={()=>{setOpen(false)}}
               >
                 ABOUT US
-              </Link>
-              <Link
-                href="#"
-                onClick={preventDefault}
+              </AnchorLink>
+              <AnchorLink
+               className='link'
+                href="#about-us2"
+                onClick={()=>{setOpen(false)}}
               >
                 ABOUT US
-              </Link>
-              <Link
-                href="#"
-                onClick={preventDefault}
+              </AnchorLink>
+              <AnchorLink
+               className='link'
+                href="#about-us3"
+                onClick={()=>{setOpen(false)}}
               >
                 ABOUT US
-              </Link>
-              <Link
-                href="#"
-                onClick={preventDefault}
+              </AnchorLink>
+              <AnchorLink
+               className='link'
+                href="#about-us4"
+                onClick={()=>{setOpen(false)}}
               >
                 ABOUT US
-              </Link>
+              </AnchorLink>
 
               <button
                 onClick={handleToggle}
@@ -149,7 +181,6 @@ const [open, setOpen] = useState(false);
               </button>
             </Typography>
           </Menu>
-         
          
 
         </div>
