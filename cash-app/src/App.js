@@ -9,7 +9,6 @@ import Map from "./components/google-map/GoogleMap";
 
 function App() {
   return (
-    <>
     <div className="wrapper">
       <div id="App">
         <div id="page-wrap">
@@ -18,8 +17,6 @@ function App() {
         </div>
       </div>
     </div>
-    </>
-   
   );
 }
 

@@ -9,7 +9,7 @@ const Background = () => {
     <div className='wrapper'>
       <h2 className='nav-header'>WHAT WE DO</h2>
       
-      <span id=' news' className='nav-paragraph'>
+      <span id='news' className='nav-paragraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
@@ -19,7 +19,7 @@ const Background = () => {
         </span>
         <div className='parallax-img one'>
         </div>
-        <span id=' news' className='nav-paragraph' >
+        <span id='news' className='nav-paragraph' >
         placeat ad aspernatur itaque blanditiis temporibus nam veritatis culpa
         aut nesciunt reprehenderit quisquam dolorem ullam sint molestias,
         repudiandae sit quos quasi commodi iusto! Ab culpa, illum quis nemo
@@ -34,13 +34,13 @@ const Background = () => {
     <div className='wrapper' style={{marginTop: -90}}>
     <h2 className='nav-header'>WHY US</h2>
     <div className='parallax-img two'></div>
-    <span id=' about-us' className='nav-paragraph'>
+    <span id='about-us' className='nav-paragraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
         </span>
 
-        <span id=' about-us2' className='nav-paragraph'>
+        <span id='about-us2' className='nav-paragraph'>
         Distinctio illo repudiandae, nam ipsam corrupti, est iste cum ut
         expedita ipsa eveniet sequi blanditiis id vero a. Pariatur facere
         praesentium tempora soluta animi quibusdam enim magnam totam cumque
@@ -53,13 +53,13 @@ const Background = () => {
     <div className='wrapper' style={{marginTop: -440}}>
     <h2 className='nav-header'>WHY US</h2>
     <div className='parallax-img three'></div>
-    <span id=' about-us3' className='nav-paragraph'>
+    <span id='about-us3' className='nav-paragraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
         </span>
 
-        <span id=' about-us4'className='nav-paragraph' >
+        <span id='about-us4'className='nav-paragraph' >
         Repudiandae cupiditate adipisci labore a qui illo maiores modi
         consectetur temporibus distinctio culpa, incidunt id. Repellendus
         laudantium incidunt eveniet nisi? Cupiditate consectetur qui ad eius

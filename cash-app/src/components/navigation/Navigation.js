@@ -77,7 +77,6 @@ const toggleVisibility=()=>{
 
 const scrollToTop=()=>{
   window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
-  // window.getElementsByTagName('html', 'body').animate({scrollTop: 0}, 100)
 }
   return (
     <div className='main-nav-wrapper'>
@@ -86,7 +85,6 @@ const scrollToTop=()=>{
    onClick={scrollToTop} 
    style={{height: 40, display:'flex'}}
 />}
-      {/* {isVisible && (<button className='return-to-top' onClick={scrollToTop}> <span className='arrow-up glyphicon glyphicon-chevron-up'></span> </button>)} */}
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <section className='section-content'> <h3>Lorem, ipsum dolor sit !</h3></section>
       <a className='btn-online' onClick={(e)=>{return e.target.style.backgroundColor= '#fff', e.target.style.color='#696969'}}>Online booking</a>
