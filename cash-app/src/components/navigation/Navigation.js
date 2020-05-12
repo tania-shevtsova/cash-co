@@ -15,6 +15,8 @@ import Typography from "@material-ui/core/Typography";
 import "./Navigation.css";
 // import { StyledMenu } from "../menu/Menu.styled";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Footer from '../footer/Footer'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,7 +68,6 @@ useEffect(() => {
   };
 }, []);
 const toggleVisibility=()=>{
-  console.log(window.pageYOffset)
   if (window.pageYOffset > 50) {
     setVisible(true);
   } else {
@@ -88,6 +89,7 @@ const scrollToTop=()=>{
       {/* {isVisible && (<button className='return-to-top' onClick={scrollToTop}> <span className='arrow-up glyphicon glyphicon-chevron-up'></span> </button>)} */}
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <section className='section-content'> <h3>Lorem, ipsum dolor sit !</h3></section>
+      <a className='btn-online' onClick={(e)=>{return e.target.style.backgroundColor= '#fff', e.target.style.color='#696969'}}>Online booking</a>
 
       <AppBar
         style={{ backgroundColor: "inherit",  height: 60}}
@@ -126,11 +128,9 @@ const scrollToTop=()=>{
               style={{ color: "#fff" }}
             >
               <AnchorLink
-              className='link'
+              className='link first-child'
                 href="#news"
                 onClick={()=>{setOpen(false)}}
-             
-              
               >
                 NEWS
               </AnchorLink>
@@ -185,6 +185,7 @@ const scrollToTop=()=>{
 
         </div>
       </AppBar>
+     
     </div>
     </div>
   );

@@ -8,7 +8,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vmax;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:  320px;
+}
+
+.nav-paragraph {
+  display: block;
+  color: #373a47;
+  font-size: 13px;
+  padding-left: 46px;
+  padding-right: 46px;
+  text-align: center;
 }
 
 .one {
@@ -21,6 +32,13 @@
 
 .three {
   background-image: url("../../images-background/motor-1185748_1920.jpg");
+}
+
+.nav-header {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #696969;
+  font-size: 36px;
 }
 
 @media (min-width: 768px) {
