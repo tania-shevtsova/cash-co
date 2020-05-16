@@ -13,7 +13,8 @@ const Background = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
-        tenetur saepe commodi itaque enim corrupti pariatur, laborum error dicta
+      
+       tenetur saepe commodi itaque enim corrupti pariatur, laborum error dicta
         dolore tempora earum vero. Sint cum sed fugiat quidem, incidunt illum
         veritatis adipisci mollitia autem neque natus! Nisi laudantium ipsam
         </span>
@@ -28,17 +29,17 @@ const Background = () => {
         alias architecto recusandae blanditiis obcaecati quas molestias!
         </span>
     </div>
-    <div className='wrapper' style={{marginTop: -210}}></div>
+    <div className='wrapper'></div>
     
  
-    <div className='wrapper' style={{marginTop: -90}}>
+    <div className='wrapper'>
     <h2 className='nav-header'>WHY US</h2>
-    <div className='parallax-img two'></div>
     <span id='about-us' className='nav-paragraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
         </span>
+    <div className='parallax-img two'></div>
 
         <span id='about-us2' className='nav-paragraph'>
         Distinctio illo repudiandae, nam ipsam corrupti, est iste cum ut
@@ -50,16 +51,16 @@ const Background = () => {
     </div>
     <div className='wrapper'></div>
 
-    <div className='wrapper' style={{marginTop: -440}}>
+    <div className='wrapper'>
     <h2 className='nav-header'>WHY US</h2>
-    <div className='parallax-img three'></div>
     <span id='about-us3' className='nav-paragraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
         laboriosam, unde harum, saepe eius in, nobis quis ad libero animi
         accusamus blanditiis dignissimos excepturi. Nihil sapiente voluptas
         </span>
+    <div className='parallax-img three'></div>
 
-        <span id='about-us4'className='nav-paragraph' >
+        <span id='about-us4' className='nav-paragraph' >
         Repudiandae cupiditate adipisci labore a qui illo maiores modi
         consectetur temporibus distinctio culpa, incidunt id. Repellendus
         laudantium incidunt eveniet nisi? Cupiditate consectetur qui ad eius

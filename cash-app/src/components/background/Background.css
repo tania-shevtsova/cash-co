@@ -1,5 +1,6 @@
 .wrapper {
-  height: 100vh;
+  height: 100%;
+  background-color: #f6f8fa;
 }
 
 .parallax-img {
@@ -14,12 +15,20 @@
 }
 
 .nav-paragraph {
+   color: #696969;
   display: block;
-  color: #373a47;
+  /* color: #373a47; */
   font-size: 13px;
-  padding-left: 46px;
-  padding-right: 46px;
+  margin-left: 30px;
+  margin-right: 46px;
   text-align: center;
+  line-height: 18px;
+ box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+   /* box-shadow: 0px 10px 40px 0px  rgba(0.4, 0, 0.2, 1) ; */
+      /* box-shadow: 0px 10px 40px 0px rgba(212, 20, 66, 0.15); */
+border-radius: 25px;
+width: 268px;
+margin-bottom: 20px;
 }
 
 .one {
@@ -35,9 +44,10 @@
 }
 
 .nav-header {
-  margin-top: 40px;
+  padding-top: 40px;
   margin-bottom: 10px;
-  color: #696969;
+  color: #373a47;
+  /* color: #696969; */
   font-size: 36px;
 }
 

@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 import Container from "./components/container/Container";
-import css from "./App.css";
+import "./App.module.css";
 import Navigation from "./components/navigation/Navigation";
 import Background from "./components/background/Background";
 import Burger from "./components/burger/Burger";
-import Menu from "./components/menu/Menu";
 import Map from "./components/google-map/GoogleMap";
+import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
     <div className="wrapper">
-      <div id="App">
-        <div id="page-wrap">
+      <Navbar/>
+      {/* <div id="App">
+        <div id="pageWrap">
           <Navigation pageWrapId={"page wrap"} outerContainerId={"App"} />
           <Background />
+          <Footer/>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

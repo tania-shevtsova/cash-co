@@ -87,7 +87,7 @@ const scrollToTop=()=>{
 />}
     <div className={`sticky-wrapper${isSticky ? "sticky" : ""}`}>
       <section className='section-content'> <h3>Lorem, ipsum dolor sit !</h3></section>
-      <a className='btn-online' onClick={(e)=>{return e.target.style.backgroundColor= '#fff', e.target.style.color='#696969'}}>Online booking</a>
+      <a className='btn-online'>Online booking</a>
 
       <AppBar
         style={{ backgroundColor: "inherit",  height: 60}}
@@ -100,7 +100,7 @@ const scrollToTop=()=>{
               zIndex: 120,
               left: "50%",
               top: '28%',
-              color: 'red'
+              color: '#373a47'
             }}
           >
             CASH APP
@@ -155,10 +155,10 @@ const scrollToTop=()=>{
               </AnchorLink>
               <AnchorLink
                className='link'
-                href="#about-us4"
+                href="#map"
                 onClick={()=>{setOpen(false)}}
               >
-                ABOUT US
+                CONTACTS
               </AnchorLink>
 
               <button

@@ -1,0 +1,97 @@
+/* Open Sans */
+@font-face {
+    font-family: 'OpenSans-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Open_Sans/OpenSans-Light.ttf');
+  }
+  
+  @font-face {
+    font-family: 'OpenSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Open-Sans/OpenSans-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'OpenSans-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./Open-Sans/OpenSans-SemiBold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Open-Sans/OpenSans-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'OpenSans-ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./Open-Sans/OpenSans-ExtraBold.ttf');
+  }
+
+  /* UBUNTU */
+  @font-face {
+    font-family: 'Ubuntu-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Ubuntu/Ubuntu-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Ubuntu-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Ubuntu/Ubuntu-Bold.ttf');
+  }
+
+  /* PLAYFAIR DISPLAY */
+  @font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./Playfair_Display/static/PlayfairDisplay-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Playfair_Display/static/PlayfairDisplay-Bold.ttf');
+  }
+
+  /* PLAYFAIR DISPLAY SC */
+  @font-face {
+    font-family: 'PlayfairDisplaySC-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'PlayfairDisplay-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Playfair_Display_SC/PlayfairDisplaySC-Bold.ttf');
+  }
+
+  /* POPPINS */
+  @font-face {
+    font-family: 'Poppins-Bold';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Poppins/Poppins-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Poppins-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Poppins/Poppins-Bold.ttf');
+  }

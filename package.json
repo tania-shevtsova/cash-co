@@ -1,0 +1,20 @@
+{
+  "name": "cash-co",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tania-shevtsova/cash-co.git"
+  },
+  "keywords": [],
+  "author": " <Tania> (example.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tania-shevtsova/cash-co/issues"
+  },
+  "homepage": "https://github.com/tania-shevtsova/cash-co#readme"
+}
