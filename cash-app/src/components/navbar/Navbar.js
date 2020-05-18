@@ -8,6 +8,11 @@ const Navbar = () => (
             <span className='logo'>Cash $</span>
             <span className='logo'>Co</span>
             </Link>
+            <a className={styles.navLink}>Home</a>
+            <a className={styles.navLink}>About</a>
+            <a className={styles.navLink}>Services</a>
+            <a className={styles.navLink}>Prices</a>
+            <a className={styles.navLink}>Contact</a>
             <span className={styles.phoneIcon}></span><NavLink to='/feedback' className={styles.contactsLink}> 0808 159 1234</NavLink>
         </nav>
 );

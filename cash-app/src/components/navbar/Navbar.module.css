@@ -16,11 +16,13 @@
         top: 60px;
         margin-left: -40px;
 }
-   
-  
 
 .logo{
     font-size: 14px;
+}
+
+.navLink{
+    display: none;
 }
 
 .contactsLink{
@@ -50,5 +52,27 @@
   }
   
   @media (min-width: 1200px) {
-   
+   .navLink{
+       display: flex;
+   }
+   .navbar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .phoneIcon{
+      margin: 0;
+      position: absolute;
+      left: 88.5%;
+  }
+
+  .logo{
+      margin-right: 250px;
+  }
+
+  .navbar::after{
+    content: "";
+        width: 1200px;
+}
+
 }

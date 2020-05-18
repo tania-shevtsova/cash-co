@@ -11,6 +11,7 @@ import MainContent from './components/main/MainContent'
 import Services from './components/services/Services';
 import Footer from "./components/footer/Footer";
 
+// TODO CALL BACK ON THE SIDE, BUTTON CALL BACK SCROLLS TO THE BUTTON, SIGN IN SUGN UP INSTEAD OF NUMBER, PHONE NUMBER IN THE FOOTER
 function App() {
   const docWidth = document.documentElement.offsetWidth;
 

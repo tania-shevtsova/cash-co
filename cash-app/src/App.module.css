@@ -84,6 +84,10 @@ img {
     width: 1120px;
   }
 
+  .headerSection{
+    width: 1120px;
+  }
+
   /* .contentBackground{
     background-image: url('./assets/icons/contentBack.png');
     background-repeat: no-repeat;
