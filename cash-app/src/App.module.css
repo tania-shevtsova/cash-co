@@ -7,6 +7,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh; /* minus the height of the footer */
 }
 
 img {
@@ -46,6 +48,7 @@ img {
   width: 280px;
   margin: 0 auto;
   margin-top: 200%;
+  position: relative;
 }
 
 .footer::before {
@@ -60,6 +63,19 @@ img {
 @media (min-width: 768px) {
   .wrapper {
     width: 695px;
+  }
+
+  .background{
+    height: 700px;
+  }
+
+  .services{
+    width: 695px;
+    margin-top: 50%;
+  }
+
+  .footer::before {
+    width: 768px;
   }
 }
 
@@ -172,10 +188,6 @@ div.bm-cross-button > button{
   background: rgba(0, 0, 0, 0.3);
 }
 
-#map {
-   /* height: 180px;  */
-    width: 300px;
-    height: 180px;
-  }
+
 
   /* CHANGE FONTS */

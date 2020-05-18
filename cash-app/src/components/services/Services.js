@@ -10,6 +10,20 @@ const Services = () => {
         nobis eaque sunt libero ut laboriosam quae quasi tempora aut voluptatem
         blanditiis?
       </span>
+      <ul className={styles.servicesList}>
+        <li className={styles.icon1}>
+          <span className={styles.servicesHead}>Brake Service</span>
+          <span className={styles.servicesDescription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, dolor!</span>
+        </li>
+        <li className={styles.icon2}>
+          <span className={styles.servicesHead}>Wheel Service</span>
+          <span className={styles.servicesDescription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, dolor!</span>
+        </li>
+        <li className={styles.icon3}>
+          <span className={styles.servicesHead}>Auto glass Service</span>
+          <span className={styles.servicesDescription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, dolor!</span>
+        </li>
+      </ul>
     </>
   );
 };

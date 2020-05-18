@@ -60,3 +60,22 @@
       font-family: 'Poppins-Medium';
       text-transform: uppercase;
   }
+
+  @media (min-width: 768px) {
+    .footerWrapper{
+        width: 695px;
+        position: relative;
+
+    }
+    .footerInput1{
+        display: block;
+    }
+    .footerSubmitBtn{
+        position: absolute;
+        bottom: -50px;
+        left: 1px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+}

@@ -20,4 +20,94 @@
     font-size: 14px;
     line-height: 16px;
 }
+
+.servicesList{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .servicesHeader{
+        display: block;
+        text-align: left;
+    }
+
+    .servicesHeader::after {
+        content: "";
+        display: block;
+        width: 250px;
+        margin-top: -20px;
+        margin-left: 22%;
+    }
+
+    .servicesAbout {
+        display: block;
+        text-align: left;
+        width: 220px;
+        line-height: 22px;
+    }
+    .servicesList{
+        list-style: none;
+        display: block;
+    }
+
+    .icon1 {
+        display: block;
+        background-image: url('../../assets/icons/brake-service.png');
+        background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 84%;
+    left: 80%;
+    
+    }
+
+    .icon2{
+        display: block;
+        background-image: url('../../assets/icons/wheel-service.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: 20%;
+        left: 80%;
+    }
+
+    .icon3{
+        display: block;
+        background-image: url('../../assets/icons/auto-glass-service.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 46px;
+        height: 30px;
+        position: absolute;
+        top: 134%;
+        left: 80%;
+    }
+
+    .servicesHead{
+        display: block;
+        margin-top: 40px;
+        width: 140px;
+        margin-left: -30px;
+        font-family: 'OpenSans-Bold';
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .servicesDescription{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: 'OpenSans-Regular';
+        display: block;
+        text-align: center;
+        width: 200px;
+        margin-left: -80px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+}
   

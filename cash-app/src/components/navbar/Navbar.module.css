@@ -36,3 +36,19 @@
     height: 15px;
     margin-left: 60px;
 }
+
+
+@media (min-width: 768px) {
+    .phoneIcon{
+        margin-left: 72%;
+    }
+    .navbar::after{
+        content: "";
+            width: 768px;
+            margin-left: -58px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+   
+}

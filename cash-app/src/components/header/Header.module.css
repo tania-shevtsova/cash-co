@@ -26,4 +26,20 @@ width: 100px;
 height: 30px;
 margin-top: 20px;
 }
+
+@media (min-width: 768px) {
+    .headerDesc{
+        margin-top: 20%;
+        margin-bottom: 20px;
+    }
+
+    .headerAbout{
+        display: block;
+        margin-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+   
+}
   
