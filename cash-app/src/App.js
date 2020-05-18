@@ -4,31 +4,36 @@ import Navigation from "./components/navigation/Navigation";
 import Background from "./components/background/Background";
 import Burger from "./components/burger/Burger";
 import Map from "./components/google-map/GoogleMap";
-import Footer from './components/footer/Footer'
-import Navbar from './components/navbar/Navbar';
-import styles from './App.module.css'
-import Header from './components/header/Header'
+import Navbar from "./components/navbar/Navbar";
+import styles from "./App.module.css";
+import Header from "./components/header/Header";
+import MainContent from './components/main/MainContent'
+import Services from './components/services/Services';
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-
-    <div className={styles.background}>
-       <div className={styles.layer}></div>
-    <div className={styles.wrapper}>
-      <section className={styles.headerSection}>
-        <Navbar/>
-        <Header/>
-      </section>
-      {/* <div id="App">
-        <div id="pageWrap">
-          <Navigation pageWrapId={"page wrap"} outerContainerId={"App"} />
-          <Background />
-          <Footer/>
+    <>
+      <div className={styles.background}>
+        <div className={styles.layer}></div>
+        <div className={styles.wrapper}>
+          <section className={styles.headerSection}>
+            <Navbar />
+            <Header />
+          </section>
         </div>
-      </div> */}
-    </div>
-    </div>
-   
+        <section className='main'>
+         <MainContent/>
+        </section>
+      </div>
+      <div className={styles.contentBackground}></div>
+      <section className={styles.services}>
+      <Services/>
+      </section>
+      <footer className={styles.footer}>
+      <Footer/>
+      </footer>
+    </>
   );
 }
 

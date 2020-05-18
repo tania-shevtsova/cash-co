@@ -1,0 +1,62 @@
+.footerWrapper{
+    width: 280px;
+    margin: 0 auto;
+}
+
+.footerHeader{
+    display: block;
+    margin-top: 50px;
+    color: #aeb0b5;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'OpenSans-Regular';
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+  
+
+.footerBook{
+    display: block;
+    color: #212121;
+    font-family: 'OpenSans-Regular';
+    font-size: 32px;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+
+.footerInput1 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(214, 215, 217);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    width: 280px;
+    height: 40px;
+    padding: 0 6px 0 6px;
+    margin-bottom: 15px;
+  }
+
+  .footerTextArea{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(241, 241, 241);
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        width: 280px;
+        height: 124px;
+        resize: none;
+        padding: 12px 6px 0 6px;
+        margin-bottom: 10px;
+  }
+
+  .footerSubmitBtn{
+        border-radius: 3px;
+        background-color: #f3b93e;
+        width: 280px;
+        height: 48px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      font-family: 'Poppins-Medium';
+      text-transform: uppercase;
+  }

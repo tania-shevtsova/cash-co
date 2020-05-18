@@ -42,6 +42,21 @@ img {
   height: 100vh;
 }
 
+.services{
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 200%;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  background-color: rgb(233, 233, 233);
+  width: 320px;
+  height: 1px;
+  margin-top: 50%;
+}
+
 @media (min-width: 768px) {
   .wrapper {
     width: 695px;
@@ -52,6 +67,13 @@ img {
   .wrapper {
     width: 1120px;
   }
+
+  /* .contentBackground{
+    background-image: url('./assets/icons/contentBack.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  } */
 }
 
 #App {
@@ -155,3 +177,5 @@ div.bm-cross-button > button{
     width: 300px;
     height: 180px;
   }
+
+  /* CHANGE FONTS */

@@ -1,0 +1,87 @@
+.mainContent{
+    width: 280px;
+    margin: 0 auto;
+  }
+  
+  .mainContentWrapper{
+    margin-top: -60px;
+    background-image: url('../../assets/icons/shape-header2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+  width: 320px;
+  margin-bottom: 50%;
+  }
+  .listContent{
+    list-style: none;
+  }
+  
+  .icon1{
+    display: block;
+    background-image: url('../../assets/icons/reparation.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    filter: invert(0%) sepia(3%) saturate(11%) hue-rotate(183deg) brightness(6%) contrast(102%);
+    position: absolute;
+    top: 109%;
+  }
+  .icon2{
+    display: block;
+    background-image: url('../../assets/icons/2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    filter: invert(0%) sepia(3%) saturate(11%) hue-rotate(183deg) brightness(6%) contrast(102%);
+    position: absolute;
+    top: 131%;
+  }
+  
+  .icon3{
+    display: block;
+    background-image: url('../../assets/icons/3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    filter: invert(0%) sepia(3%) saturate(11%) hue-rotate(183deg) brightness(6%) contrast(102%);
+    position: absolute;
+    top: 153%;
+  }
+  
+  .icon4{
+    display: block;
+    background-image: url('../../assets/icons/4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    filter: invert(0%) sepia(3%) saturate(11%) hue-rotate(183deg) brightness(6%) contrast(102%);
+    position: absolute;
+    top: 175%;
+  }
+
+  .listDesc{
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    font-family: 'OpenSans-Light';
+    margin-top: 40px;
+    width: 300px;
+  }
+  
+  .listDesc::after{
+    content: "";
+    background-image: url('../../assets/icons/right-short-arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-top: -12px;
+    margin-left: 50%;
+    opacity: 0.502;
+  }

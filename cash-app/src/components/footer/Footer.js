@@ -1,13 +1,20 @@
 import React from "react";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
-  const Container = document.getElementById("map");
-  console.log(Container);
 
   return (
-    <>
-   <h2 className='nav-header'>CONTACTS</h2>
+    <div className={styles.footerWrapper}>
+    <span className={styles.footerHeader}>Having problems with your car?</span>
+    <span className={styles.footerBook}>Book now</span>
+
+<form >
+    <input type='submit' className={styles.footerInput1} placeholder='Your name*'/>
+    <input type='submit' className={styles.footerInput1} placeholder='Your email address*'/>
+    <textarea type='submit' className={styles.footerTextArea} placeholder='Message*'/>
+    <button className={styles.footerSubmitBtn}>Send message</button>
+    </form>
+   {/* <h2 className='nav-header'>CONTACTS</h2>
   <div className='mainWrap'>
   <span className='footer-city'>
   Kyiv
@@ -29,8 +36,8 @@ const Footer = () => {
   <span className='footer-workTime'>
   08:00 AM - 16:00 PM
   </span>
-  </div>
-  </>)
+  </div> */}
+  </div>)
 };
 
 export default Footer;

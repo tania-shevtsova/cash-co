@@ -1,0 +1,23 @@
+.servicesHeader{
+    font-family: 'OpenSans-Regular';
+    font-size: 32px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+.servicesHeader::after {
+    content: "";
+    display: block;
+    width: 136px;
+    border: 1px solid rgb(243, 201, 89);
+    margin-top: -20px;
+    margin-left: 50%;
+}
+
+.servicesAbout {
+    font-family: 'OpenSans-Regular';
+    color: #666666;
+    font-size: 14px;
+    line-height: 16px;
+}
+  
