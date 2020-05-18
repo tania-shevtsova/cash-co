@@ -9,10 +9,10 @@ const Footer = () => {
     <span className={styles.footerBook}>Book now</span>
 
 <form >
-    <input type='submit' className={styles.footerInput1} placeholder='Your name*'/>
-    <input type='submit' className={styles.footerInput1} placeholder='Your email address*'/>
-    <textarea type='submit' className={styles.footerTextArea} placeholder='Message*'/>
-    <button className={styles.footerSubmitBtn}>Send message</button>
+    <input placeholder='Your name*'className={styles.footerInput1}/>
+    <input className={styles.footerInput1} placeholder='Your email address*'/>
+    <textarea className={styles.footerTextArea} placeholder='Message*'/>
+    <button className={styles.footerSubmitBtn} type="submit">Send message</button>
     </form>
    {/* <h2 className='nav-header'>CONTACTS</h2>
   <div className='mainWrap'>
