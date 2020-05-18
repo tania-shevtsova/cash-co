@@ -1,4 +1,38 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    padding: 20px 0 26px 0;
+    font-family: 'Ubuntu-Bold';
+    color: #fff;
+}
+
+.navbar::after{
+    content: "";
+    display: block;
+        background-color: #726e6e;
+        width: 320px;
+        height: 1px;
+        position: absolute;
+        top: 60px;
+        margin-left: -40px;
+}
+   
+  
+
+.logo{
+    font-size: 14px;
+}
+
+.contactsLink{
+    font-size: 14px;
+}
+
+.phoneIcon{
+    display: block;
+    background-image: url('../../assets/icons/phone.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    margin-left: 60px;
 }

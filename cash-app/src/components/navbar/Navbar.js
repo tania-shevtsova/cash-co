@@ -5,10 +5,10 @@ import styles from './Navbar.module.css';
 const Navbar = () => (
     <nav className={styles.navbar}>
         <Link to='/' className={styles.logo}>
-            <span>Cash $</span>
-            <span>Co</span>
+            <span className='logo'>Cash $</span>
+            <span className='logo'>Co</span>
             </Link>
-            <NavLink to='/feedback' className={styles.contactsLink}>Контакты</NavLink>
+            <span className={styles.phoneIcon}></span><NavLink to='/feedback' className={styles.contactsLink}> 0808 159 1234</NavLink>
         </nav>
 );
 

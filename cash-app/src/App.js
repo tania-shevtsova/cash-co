@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import Container from "./components/container/Container";
-import "./App.module.css";
 import Navigation from "./components/navigation/Navigation";
 import Background from "./components/background/Background";
 import Burger from "./components/burger/Burger";
 import Map from "./components/google-map/GoogleMap";
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar';
+import styles from './App.module.css'
+import Header from './components/header/Header'
 
 function App() {
   return (
-    <div className="wrapper">
-      <Navbar/>
+
+    <div className={styles.background}>
+       <div className={styles.layer}></div>
+    <div className={styles.wrapper}>
+      <section className={styles.headerSection}>
+        <Navbar/>
+        <Header/>
+      </section>
       {/* <div id="App">
         <div id="pageWrap">
           <Navigation pageWrapId={"page wrap"} outerContainerId={"App"} />
@@ -20,6 +27,8 @@ function App() {
         </div>
       </div> */}
     </div>
+    </div>
+   
   );
 }
 

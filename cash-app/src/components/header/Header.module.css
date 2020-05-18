@@ -1,0 +1,29 @@
+.headerDesc{
+    margin-top: 50%;
+    font-size: 50px;
+    line-height: 52px;
+color: #fff;
+    font-family: 'OpenSans-Light';
+    margin-bottom: 6px;
+}
+
+.headerAbout{
+    font-family: 'OpenSans-Light';
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+
+}
+
+.headerButton {
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 2px solid #ffffff;
+background-color: transparent;
+width: 100px;
+height: 30px;
+margin-top: 20px;
+}
+  
