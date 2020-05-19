@@ -8,8 +8,8 @@ const Footer = () => {
     <span className={styles.footerHeader}>Having problems with your car?</span>
     <span className={styles.footerBook}>Book now</span>
 
-<form name="contacts" className={styles.footerForm}>
-    <input id="contacts" placeholder='Your name*'className={styles.footerInput1}/>
+<form id="contacts" className={styles.footerForm}>
+    <input placeholder='Your name*'className={styles.footerInput1}/>
     <input className={styles.footerInput1} placeholder='Your email address*'/>
     <textarea className={styles.footerTextArea} placeholder='Message*'/>
     <button className={styles.footerSubmitBtn} type="submit">Send message</button>

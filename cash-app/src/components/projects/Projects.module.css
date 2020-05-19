@@ -1,0 +1,73 @@
+.projectHeader{
+    display: none;
+}
+
+.projectAbout{
+     display: none;     
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+    .projectHeader{
+        font-family: 'OpenSans-Regular';
+        font-size: 48px;
+        color: #fff;
+        display: block;
+        padding-top: 100px;
+    }
+
+    .wrapper{
+        margin: 0 auto;
+        width: 1120px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .projectHeader::after {
+        content: "";
+        display: block;
+        border: 1px solid #f3b93e;
+        width: 104px;
+        height: 60px;
+        border-left:  transparent;
+        border-bottom: transparent;
+
+        position: relative;
+        left: 24%;
+        margin-top: -3%;
+      }
+
+      .rect{
+        display: block;
+        border: 1px solid #f3b93e;
+        width: 60px;
+        height: 429px;
+        position: relative;
+        border-right: transparent;
+        position: relative;
+        left: -11%;
+        margin-top: -6.5%;
+      }
+
+      .projectImg{
+          display: block;
+          background-image: url('../../images-background/jeep-4640909_1920.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 400px;
+          margin-top: -40.2%;
+          margin-left: -4.5%;
+      }
+      .projectAbout{
+          font-family: 'OpenSans-Light';
+          font-size: 14px;
+          color: #fff;
+          /* opacity: 0.5; */
+          display: inline-block;
+          text-align: right;
+      }
+      
+}

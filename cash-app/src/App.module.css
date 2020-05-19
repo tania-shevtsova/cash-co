@@ -88,10 +88,19 @@ img {
     width: 1120px;
   }
 
+  .services{
+    width: 1120px;
+  }
+
   .background{
     height: 850px;
   }
 
+  .projects {
+    margin: 0 auto;
+    width: 1120px;
+    height: 100%;
+  }
   .contentBackground{
     background-image: url('./assets/icons/contentBack.png');
     background-repeat: no-repeat;

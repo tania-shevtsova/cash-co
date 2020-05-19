@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Container from "./components/container/Container";
 import Navigation from "./components/navigation/Navigation";
 import Background from "./components/background/Background";
 import Burger from "./components/burger/Burger";
@@ -10,7 +9,7 @@ import Header from "./components/header/Header";
 import MainContent from './components/main/MainContent'
 import Services from './components/services/Services';
 import Footer from "./components/footer/Footer";
-
+import Projects from './components/projects/Projects';
 // TODO CALL BACK ON THE SIDE, BUTTON CALL BACK SCROLLS TO THE BUTTON, SIGN IN SUGN UP INSTEAD OF NUMBER, PHONE NUMBER IN THE FOOTER
 function App() {
   const docWidth = document.documentElement.offsetWidth;
@@ -37,7 +36,11 @@ function App() {
          <MainContent/>
         </section>
       </div>
-      <div className={styles.contentBackground}></div>
+      <div className={styles.contentBackground}>
+        <section className={styles.projects}>
+        <Projects/>
+        </section>
+      </div>
       <section className={styles.services}>
       <Services/>
       </section>
