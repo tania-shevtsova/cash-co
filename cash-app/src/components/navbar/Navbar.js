@@ -13,7 +13,8 @@ const Navbar = () => (
             <a className={styles.navLink}>Services</a>
             <a className={styles.navLink}>Prices</a>
             <a className={styles.navLink}>Contact</a>
-            <span className={styles.phoneIcon}></span><NavLink to='/feedback' className={styles.contactsLink}> 0808 159 1234</NavLink>
+            <button className={styles.navButton}>Sign in</button>
+            <button className={styles.navButton}>Sign up</button>
         </nav>
 );
 

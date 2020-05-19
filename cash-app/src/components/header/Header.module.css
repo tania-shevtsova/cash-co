@@ -19,12 +19,24 @@ color: #fff;
     font-size: 10px;
     color: #fff;
     text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding-top: 11px;
     border-radius: 18px;
     border: 2px solid #ffffff;
 background-color: transparent;
 width: 100px;
 height: 30px;
 margin-top: 20px;
+}
+
+
+.headerRectangle{
+       display: none; 
+}
+
+.headerArrow{
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -40,6 +52,62 @@ margin-top: 20px;
   }
   
   @media (min-width: 1200px) {
-   
+    .headerDesc{
+        margin-top: 220px;
+        font-size: 72px;
+        line-height: 74px;
+    }
+
+    .headerAbout{
+       font-size: 30px;
+    }
+
+    .headerButton{
+        width: 201px;
+        height: 48px;
+        border-radius: 30px;
+        font-size: 16px;
+        display: block;
+    }
+
+
+.headerButton:hover {
+    cursor: pointer;
+}
+
+    .headerRectangle{
+        display: block;
+        background-image: url('../../assets/icons/shape-header1.png');
+            width: 489px;
+            height: 390px;
+            border: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 134px;
+            position: relative;
+            left: 15%;
+    }
+
+    .headerArrow:first-of-type{
+        background-image: url('../../assets/icons/whiteArr.png');
+        background-repeat: no-repeat;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 42%;
+        left: 90%;
+    }
+
+    .headerArrow:last-of-type {
+        background-image: url('../../assets/icons/left-arrow.png');
+        background-repeat: no-repeat;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+    }
 }
   

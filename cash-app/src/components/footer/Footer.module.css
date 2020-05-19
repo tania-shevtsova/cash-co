@@ -13,6 +13,20 @@
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+
+/* .contactsLink{
+    font-size: 14px;
+}
+
+.phoneIcon{
+    display: block;
+    background-image: url('../../assets/icons/phone.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    margin-left: 60px;
+} */
   
 
 .footerBook{

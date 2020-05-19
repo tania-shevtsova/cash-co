@@ -4,11 +4,16 @@ import styles from './Header.module.css'
 
 const Header = () => {
     return (
-        <>
+        <div style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse'}}>
+        <div className={styles.headerRectangle}></div>
+        <span className={styles.headerArrow}></span>
+        <span className={styles.headerArrow}></span>
+        <div>
         <h1 className={styles.headerDesc}>Service</h1>
         <span className={styles.headerAbout}>Over 35 Years Of Quality Auto Service</span>
-        <button className={styles.headerButton}>Book now</button>
-</>
+        <a href='#contacts' className={styles.headerButton}>Book now</a>
+        </div>
+</div>
     )
 }
 

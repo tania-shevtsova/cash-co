@@ -88,12 +88,17 @@ img {
     width: 1120px;
   }
 
-  /* .contentBackground{
+  .background{
+    height: 850px;
+  }
+
+  .contentBackground{
     background-image: url('./assets/icons/contentBack.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-  } */
+    height: 900px;
+    margin-top: 12.5%;
+  }
 }
 
 #App {

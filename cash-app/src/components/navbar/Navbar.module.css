@@ -25,54 +25,78 @@
     display: none;
 }
 
-.contactsLink{
-    font-size: 14px;
+.navButton{
+    font-size: 10px;
+    color: #fff;
+    /* text-transform: uppercase; */
+    border-radius: 18px;
+    border: 2px solid #ffffff;
+background-color: transparent;
+width: 80px;
+height: 28px;
+margin-top: -6px;
 }
 
-.phoneIcon{
-    display: block;
-    background-image: url('../../assets/icons/phone.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 15px;
-    height: 15px;
-    margin-left: 60px;
+.navButton:first-of-type{
+    margin-left: 20px;
 }
+
+.navButton:last-of-type{
+    margin-right: -20px;
+}
+
+
 
 
 @media (min-width: 768px) {
-    .phoneIcon{
-        margin-left: 72%;
-    }
     .navbar::after{
         content: "";
             width: 768px;
             margin-left: -58px;
+    }
+    .navButton:first-of-type{
+        margin-left: 60%;
+    }
+    
+    .navButton:last-of-type{
+        margin-right: 6px;
     }
   }
   
   @media (min-width: 1200px) {
    .navLink{
        display: flex;
+       font-size: 16px;
    }
    .navbar{
     display: flex;
     justify-content: space-between;
-  }
-
-  .phoneIcon{
-      margin: 0;
-      position: absolute;
-      left: 88.5%;
+    align-items: center;
   }
 
   .logo{
       margin-right: 250px;
+      font-size: 16px;
   }
 
   .navbar::after{
     content: "";
         width: 1200px;
+}
+
+.navButton:first-of-type{
+    margin: 0;
+}
+
+.navButton:last-of-type{
+    margin: 0;
+}
+
+.navButton{
+    align-self: center;
+    font-size: 16px;
+    width: 100px;
+    height: 32px;
 }
 
 }

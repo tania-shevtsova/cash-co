@@ -13,6 +13,7 @@
   width: 100%;
   margin-bottom: 50%;
   }
+
   .listContent{
     list-style: none;
   }
@@ -111,7 +112,9 @@
 
     .listDesc{
       font-size: 16px;
-      margin-top: 70px;
+      margin-top: 80px;
+      display: block;
+      margin-left: -52%;
     }
     .icon1{
       top: 88%;
@@ -144,5 +147,55 @@
   }
   
   @media (min-width: 1200px) {
-   
+
+    .mainContent{
+      display: flex;
+    flex-direction: row-reverse;
+    width: 1120px;
+    height: 100%;
+    }
+   .mainContentWrapper{
+    margin-top: 13%;
+    background-image: url('../../assets/icons/shape-header2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .icon1{
+    top: 103%;
+    position: absolute;
+    left: -4%;
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+  .icon2{
+    top: 103%;
+    position: absolute;
+    left: -26%;
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+  .icon3{
+    top: 103%;
+    position: absolute;
+    left: 50%;
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+  .icon4{
+    top: 103%;
+    position: absolute;
+    left: 26%;
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+
+  .listContent{
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
