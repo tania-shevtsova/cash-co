@@ -53,6 +53,11 @@ margin-top: 20px;
   }
   
   @media (min-width: 1200px) {
+      .headerDiv{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
     .headerDesc{
         margin-top: 220px;
         font-size: 72px;

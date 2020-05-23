@@ -4,11 +4,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "row-reverse",
-      }}
+    className={styles.headerDiv}
     >
       <div className={styles.headerRectangle}></div>
       <span className={styles.headerArrow}></span>

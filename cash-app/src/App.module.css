@@ -44,6 +44,10 @@ img {
   height: 100vh;
 }
 
+.service{
+  display: none;
+}
+
 .services{
   width: 280px;
   margin: 0 auto;
@@ -79,6 +83,12 @@ img {
   }
 }
 
+@media (min-width: 1024px) {
+  .footer::before {
+    width: 1024px;
+  }
+}
+
 @media (min-width: 1200px) {
   .wrapper {
     width: 1120px;
@@ -86,6 +96,12 @@ img {
 
   .headerSection{
     width: 1120px;
+  }
+
+  .service{
+    display: block;
+    width: 1120px;
+    margin: 0 auto;
   }
 
   .services{

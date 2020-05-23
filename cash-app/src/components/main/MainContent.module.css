@@ -5,7 +5,7 @@
   }
   
   .mainContentWrapper{
-    margin-top: -60px;
+    margin-top: -70px;
     background-image: url('../../assets/icons/shape-header2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,7 +101,7 @@
     .mainContentWrapper{
       margin-top: 80px;
       /* height: 1000px; */
-      background-size: 300%;
+      background-size: 330%;
     margin-bottom: 50%;
     }
 
@@ -145,6 +145,40 @@
       height: 60px;
     }
   }
+
+  @media (min-width: 1024px) {
+    .mainContentWrapper{
+      background-size: 250%;
+    }
+    .icon1{
+      top: 88%;
+      margin-left: 6%;
+      transform: none;
+      width: 60px;
+      height: 60px;
+    }
+    .icon2{
+      top: 87.2%;
+      margin-left: 50%;
+      transform: none;
+      width: 60px;
+      height: 60px;
+    }
+    .icon3{
+      top: 115%;
+      margin-left: 6%;
+      transform: none;
+      width: 60px;
+      height: 60px;
+    }
+    .icon4{
+      top: 115%;
+      margin-left: 50%;
+      transform: none;
+      width: 60px;
+      height: 60px;
+    }
+  }
   
   @media (min-width: 1200px) {
 
@@ -164,7 +198,7 @@
   .icon1{
     top: 103%;
     position: absolute;
-    left: -4%;
+    left: 4%;
     transform: none;
     width: 60px;
     height: 60px;
@@ -172,7 +206,7 @@
   .icon2{
     top: 103%;
     position: absolute;
-    left: -26%;
+    left: -16%;
     transform: none;
     width: 60px;
     height: 60px;
@@ -180,7 +214,7 @@
   .icon3{
     top: 103%;
     position: absolute;
-    left: 50%;
+    left: 52%;
     transform: none;
     width: 60px;
     height: 60px;
@@ -188,7 +222,7 @@
   .icon4{
     top: 103%;
     position: absolute;
-    left: 26%;
+    left: 32%;
     transform: none;
     width: 60px;
     height: 60px;

@@ -1,0 +1,11 @@
+.serviceBack{
+    background-image: url('../../assets/icons/shape-content.png');
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1200px;
+    margin: 0 auto;
+    margin-left: -40px;
+    margin-top: -8%;
+    height: 840px;
+}
