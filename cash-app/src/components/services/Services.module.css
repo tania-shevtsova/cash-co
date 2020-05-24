@@ -109,5 +109,88 @@
   }
   
   @media (min-width: 1200px) {
+
+    .servicesBefore {
+        display: block;
+        width: 30px;
+        height: 100px;
+        border: 1px solid rgb(243, 201, 89);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        position: absolute;
+        left: -3.6%;
+        top: 8%;
+    }
+
+    .servicesAfter {
+        display: block;
+        width: 799px;
+        height: 100px;
+        border: 1px solid rgb(243, 201, 89);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        position: absolute;
+        left: -4%;
+        top: 190%;
+    }
+    .servicesHeader::after {
+        content: "";
+        display: block;
+        width: 620px;
+        height: 486px;
+        
+        border: 1px solid rgb(243, 201, 89);
+        border-left: none;
+        border-bottom: none;
+        margin-top: -20px;
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .servicesAbout {
+        display: block;
+        text-align: left;
+        width: 280px;
+        line-height: 22px;
+    }
+
+    .icon1 {
+        display: block;
+        background-image: url('../../assets/icons/brake-service.png');
+        background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 78%;
+    left: 80%;
+    
+    }
+
+    .icon2{
+        display: block;
+        background-image: url('../../assets/icons/wheel-service.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: -4%;
+        left: 80%;
+    }
+
+    .icon3{
+        display: block;
+        background-image: url('../../assets/icons/auto-glass-service.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 46px;
+        height: 30px;
+        position: absolute;
+        top: 174%;
+        left: 80%;
+    }
 }
   

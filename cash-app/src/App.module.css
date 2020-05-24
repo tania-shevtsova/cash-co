@@ -124,6 +124,12 @@ img {
     height: 900px;
     margin-top: 12.5%;
   }
+
+.footer::before {
+  content: "";
+  width: 1200px;
+  margin-top: 36%;
+}
 }
 
 #App {

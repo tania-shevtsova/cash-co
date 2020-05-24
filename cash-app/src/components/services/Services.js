@@ -3,6 +3,7 @@ import styles from "./Services.module.css";
 const Services = () => {
   return (
     <>
+    <span className={styles.servicesBefore}></span>
       <h2 className={styles.servicesHeader}>Services</h2>
       <span className={styles.servicesAbout}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nobis!
@@ -24,6 +25,7 @@ const Services = () => {
           <span className={styles.servicesDescription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, dolor!</span>
         </li>
       </ul>
+      <span className={styles.servicesAfter}></span>
     </>
   );
 };

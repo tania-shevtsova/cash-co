@@ -14,6 +14,10 @@
     margin-bottom: 20px;
 }
 
+.footerBottom {
+    display: none;
+}
+
 /* .contactsLink{
     font-size: 14px;
 }
@@ -92,4 +96,77 @@
   }
   
   @media (min-width: 1200px) {
+    .footerWrapper{
+        width: 1120px;
+        position: relative;
+    }
+
+    .footerBottomWrapper {
+        width: 1120px;
+        margin: 0 auto;
+    }
+
+    .footerBottom {
+        margin-top: 9%;
+        position: absolute;
+        display: block;
+        width: 1200px;
+        height: 134px;
+        background-color: #222222;
+        padding-bottom: 70px;
+    }
+
+    .footerBottomDesc {
+        display: block;
+        font-family: "OpenSans-Medium";
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        opacity: 0.5;
+    }
+
+    .footerBottomList {
+        display: flex;
+        list-style: none;
+    }
+
+    .footerBottomItem {
+        margin-right: 80px;
+        font-family: "OpenSans-Medium";
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .footerBottomItem2 {
+        font-family: "OpenSans-Medium";
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .footerBottomItem::before {
+        content: "";
+        background-image: url('../../assets/icons/phone.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        left: 19%;
+        top: 65%;
+    }
+
+    .footerBottomMail {
+        display: block;
+        margin-top: 6px;
+        font-family: "OpenSans-Bold";
+    }
+
+    .footerBottomPhone {
+        display: block;
+        margin-top: 6px;
+        font-family: "OpenSans-Bold";
+    }
 }

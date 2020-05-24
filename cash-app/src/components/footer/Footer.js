@@ -4,6 +4,7 @@ import styles from "./Footer.module.css";
 const Footer = () => {
 
   return (
+    <>
     <div className={styles.footerWrapper}>
     <span className={styles.footerHeader}>Having problems with your car?</span>
     <span className={styles.footerBook}>Book now</span>
@@ -40,7 +41,22 @@ const Footer = () => {
   08:00 AM - 16:00 PM
   </span>
   </div> */}
-  </div>)
+
+  </div>
+  <div style={{position: "relative"}}>
+    <div className={styles.footerBottom}>
+      <div className={styles.footerBottomWrapper}>
+    <span className={styles.footerBottomDesc}>Contact us</span>
+    <ul className={styles.footerBottomList}>
+      <li className={styles.footerBottomItem}>Email <a href="mailto:info@gmail.com" className={styles.footerBottomMail}>info@gmail.com</a></li>
+      <li className={styles.footerBottomItem2}>Phone <a href="tel:+08081591234" className={styles.footerBottomPhone}>08081591234</a></li>
+    </ul>
+    </div>
+  </div>
+  </div>
+  </>
+  )
+
 };
 
 export default Footer;
