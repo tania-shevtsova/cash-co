@@ -7,13 +7,13 @@ const Footer = () => {
     <>
     <div className={styles.footerWrapper}>
     <span className={styles.footerHeader}>Having problems with your car?</span>
-    <span className={styles.footerBook}>Book now</span>
+    <span id="contacts" className={styles.footerBook}>Call now</span>
 
-<form id="contacts" className={styles.footerForm}>
-    <input placeholder='Your name*'className={styles.footerInput1}/>
-    <input className={styles.footerInput1} placeholder='Your email address*'/>
-    <textarea className={styles.footerTextArea} placeholder='Message*'/>
-    <button className={styles.footerSubmitBtn} type="submit">Send message</button>
+<form className={styles.footerForm}>
+    <input placeholder='Your name'className={styles.footerInput1}/>
+    <input className={styles.footerInput1} placeholder='Your phone number*'/>
+    <textarea className={styles.footerTextArea} placeholder='Message'/>
+    <button className={styles.footerSubmitBtn} type="submit">Call back</button>
     </form>
     {/* <span className={styles.phoneIcon}></span> <NavLink to='/feedback' className={styles.contactsLink}> 0808 159 1234</NavLink> */}
 

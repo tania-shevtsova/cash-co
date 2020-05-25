@@ -15,7 +15,7 @@ const Header = () => {
           Over 35 Years Of Quality Auto Service
         </span>
         <button className={styles.headerButton}>
-          <a href="#contacts">Book now</a>
+          <a href="#contacts">Call now</a>
         </button>
       </div>
     </div>
