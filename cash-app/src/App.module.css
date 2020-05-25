@@ -1,31 +1,31 @@
-* {
+
+/* * {
     margin: 0;
     padding: 0; 
-}
-body {
+} */
+/* body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #fff;
       overflow-x: hidden;
-      min-height: 100vh; /* minus the height of the footer */
+      min-height: 100vh;
 }
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
+  } */
 
 
-.wrapper {
+/* .wrapper {
   width: 280px;
   padding: 0 20px;
   margin: 0 auto;
-}
+} */
 
-.layer{
-  /* background-color: rgba(75, 75, 73, 0.7); */
+/* .layer{
   background-color: rgba(53, 52, 52, 0.7);
 
   position: absolute;
@@ -46,9 +46,9 @@ img {
 
 .service{
   display: none;
-}
+} */
 
-.services{
+/* .services{
   width: 280px;
   margin: 0 auto;
   margin-top: 200%;
@@ -62,8 +62,8 @@ img {
   width: 320px;
   height: 1px;
   margin-top: 50%;
-}
-
+} */
+/* 
 @media (min-width: 768px) {
   .wrapper {
     width: 695px;
@@ -87,8 +87,8 @@ img {
   .footer::before {
     width: 1024px;
   }
-}
-
+} */
+/* 
 @media (min-width: 1200px) {
   .wrapper {
     width: 1120px;
@@ -130,104 +130,4 @@ img {
   width: 1200px;
   margin-top: 36%;
 }
-}
-
-#App {
-  font-family: sans-serif;
-
-  /* Give app full page to work with */
-  height: 100vh;
-}
-
-#pageWrap {
-  text-align: center;
-background-color: #F6F8FA;
-  /* Prevent sidebar from showing a scrollbar on page */
-  overflow: auto;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-
-  outline: none;
-  /* Our sidebar item styling */
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-}
-
-/* Change color on hover */
-.bm-item:hover {
-  color: white;
-}
-
-
-div.bm-menu-wrap.disable {
-  width: 270px !important; 
-}
-
-/* The rest copied directly from react-burger-menu docs */
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: sticky;
-  width: 30px;
-  height: 24px;
-  left: 36px;
-  top: 5%;
-  margin-left: 100%;
-  margin-top: 60%;
-}
-
-div.bm-burger-button > button {
-  outline: none;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  outline: none;
-}
-
-div.bm-cross-button > button{
-  outline: none;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-
-
-  /* CHANGE FONTS */
+} */

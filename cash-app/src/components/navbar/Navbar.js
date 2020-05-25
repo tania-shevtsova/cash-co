@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 const Navbar = () => (
@@ -13,8 +13,8 @@ const Navbar = () => (
             <a className={styles.navLink}>Services</a>
             <a className={styles.navLink}>Prices</a>
             <a className={styles.navLink}>Contact</a>
-            <button className={styles.navButton}>Sign in</button>
-            <button className={styles.navButton}>Sign up</button>
+            <Link className={styles.navButton} to='/login' onClick={()=>console.log('hello')}>Sign in</Link>
+            <Link className={styles.navButton} to='/register'>Sign up</Link>
         </nav>
 );
 
