@@ -4,13 +4,20 @@ import styles from './Navbar.module.css';
 import RegisterModal from '../registerModal/RegisterModal';
 import LoginModal from '../loginModal/LoginModal';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [isOpen, setOpen]=useState(false);
     const [isOpenLogin, setOpenLogin]=useState(false);
 
     const handleOpen=(e)=> {
         e.preventDefault(); 
-        setOpen(!isOpen);  
+        setOpen(!isOpen); 
+        document.body.style.overflow = 'hidden';  
+        document.body.style.position = 'fixed';
+    }
+
+    const handleOpenLogin=(e)=>{
+        e.preventDefault(); 
+        setOpenLogin(!isOpenLogin);
         document.body.style.overflow = 'hidden';  
         document.body.style.position = 'fixed';
     }
@@ -24,11 +31,10 @@ const Navbar = () => {
             <a className={styles.navLink}>Services</a>
             <a className={styles.navLink}>Prices</a>
             <a className={styles.navLink}>Contact</a>
-            <button className={styles.navButton} onClick={(e)=>{e.preventDefault(); setOpenLogin(!isOpenLogin)}}>Sign in</button>
+            <button className={styles.navButton} onClick={handleOpenLogin}>Sign in</button>
             <button className={styles.navButton} onClick={handleOpen}>Sign up</button>
             {isOpen && <RegisterModal isOpen={isOpen} onClose={handleOpen}/>}
-            {console.log(isOpen)}
-            {isOpenLogin && <LoginModal/>}
+            {isOpenLogin && <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin}/>}
         </nav>
    )
 }
