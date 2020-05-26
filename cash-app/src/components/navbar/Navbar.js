@@ -7,7 +7,13 @@ import LoginModal from '../loginModal/LoginModal';
 const Navbar = () => {
     const [isOpen, setOpen]=useState(false);
     const [isOpenLogin, setOpenLogin]=useState(false);
-    
+
+    const handleOpen=(e)=> {
+        e.preventDefault(); 
+        setOpen(!isOpen);  
+        document.body.style.overflow = 'hidden';  
+        document.body.style.position = 'fixed';
+    }
    return ( <nav className={styles.navbar}>
         <Link to='/' className={styles.logo}>
             <span className='logo'>Cash $</span>
@@ -19,8 +25,9 @@ const Navbar = () => {
             <a className={styles.navLink}>Prices</a>
             <a className={styles.navLink}>Contact</a>
             <button className={styles.navButton} onClick={(e)=>{e.preventDefault(); setOpenLogin(!isOpenLogin)}}>Sign in</button>
-            <button className={styles.navButton} onClick={(e)=>{ e.preventDefault(); setOpen(!isOpen)}}>Sign up</button>
-            {isOpen && <RegisterModal/>}
+            <button className={styles.navButton} onClick={handleOpen}>Sign up</button>
+            {isOpen && <RegisterModal isOpen={isOpen} onClose={handleOpen}/>}
+            {console.log(isOpen)}
             {isOpenLogin && <LoginModal/>}
         </nav>
    )

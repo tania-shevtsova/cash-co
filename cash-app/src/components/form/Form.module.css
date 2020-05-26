@@ -22,3 +22,20 @@
   font-family: 'Poppins-Medium';
   text-transform: uppercase;
 }
+
+.modalForm {
+  position: absolute;
+  width: 300px;
+  z-index: 999999999999999 !important;
+}
+
+.closeBtn {
+  background-image: url('../../assets/close.svg');
+  width: 10px;
+  height: 10px;
+  fill: red;
+  position: absolute;
+  z-index: 9999999999999999 !important;
+
+  transform: rotate(180deg);
+}
