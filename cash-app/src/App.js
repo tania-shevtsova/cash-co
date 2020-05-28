@@ -12,10 +12,7 @@ import MainContent from './components/main/MainContent';
 // import Footer from "./components/footer/Footer";
 // import Projects from './components/projects/Projects';
 // import Service from './components/service/Service';
-
 import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
 // TODO CALL BACK ON THE SIDE, BUTTON CALL BACK SCROLLS TO THE BUTTON, SIGN IN SUGN UP INSTEAD OF NUMBER, PHONE NUMBER IN THE FOOTER
 function App({isAuth}) {
   const docWidth = document.documentElement.offsetWidth;
@@ -34,15 +31,6 @@ function App({isAuth}) {
     return (
         <Router>
             <Route path='/' exact component={HomePage} />
-        {/* <Redirect to='/'/> */}
-        {/* </Switch>
-    )
-    } */}
-    {/* return ( */}
-        {/* <Switch> */}
-            <Route path='/login' component={LoginPage}/>
-            <Route path='/register' component={RegisterPage}/>
-            {/* <Redirect to='/login'/> */}
         </Router>
     )
 

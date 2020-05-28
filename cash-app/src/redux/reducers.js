@@ -5,8 +5,11 @@ const user=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
         case Types.REGISTER_SUCCESS:
+            console.log('USER', action.payload.data)
             return action.payload.data;
 
+            case Types.LOGOUT:
+                return state;
             default:
                 return state;
     }
@@ -17,6 +20,8 @@ const authenticated=(state=false, action)=>{
         case Types.LOGIN_SUCCESS:
         case Types.REGISTER_SUCCESS:
             return true;
+            case Types.LOGOUT:
+                return false;
             default:
                 return state;
     }
@@ -25,8 +30,10 @@ const authenticated=(state=false, action)=>{
 const token=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
-            return action.payload.data;
+            return action.payload.data.token;
 
+            case Types.LOGOUT:
+                return null;
             default: 
             return state;
     }

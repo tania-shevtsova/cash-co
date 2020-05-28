@@ -1,4 +1,5 @@
 import React, {useEffect, useRef } from "react";
+import {connect} from 'react-redux';
 import Form from "../form/Form";
 import styles from "./RegisterModal.module.css";
 
@@ -31,7 +32,9 @@ useEffect(()=>{
     }
 })
 
-  if (!props.isOpen) {
+  if (!props.isOpen || props.authenticated) {
+    document.body.style.overflow = "initial";
+    document.body.style.position = "initial";
     return null;
   } else {
     return (
@@ -64,11 +67,15 @@ useEffect(()=>{
               </g>
             </svg>
           </div>
-          <Form formName="Register" />
+         <Form formName="Register"/>
         </div>
       </>
     );
   }
 };
 
-export default RegisterModal;
+const mapStateToProps=({authenticated})=>({
+  authenticated
+})
+
+export default connect(mapStateToProps)(RegisterModal);

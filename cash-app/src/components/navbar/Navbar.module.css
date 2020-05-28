@@ -80,8 +80,6 @@ z-index: 11 !important;
 }
 
 
-
-
 @media (min-width: 768px) {
     .navbar::after{
         content: "";
@@ -143,5 +141,13 @@ z-index: 11 !important;
     width: 100px;
     height: 32px;
 }
+
+.userAccountBtn{
+    width: 35px;
+      height: 35px;
+      fill: #fff !important;
+      cursor: pointer;
+    }
+    
 
 }

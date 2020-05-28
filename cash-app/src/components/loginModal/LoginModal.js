@@ -1,4 +1,5 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect} from 'react';
+import {connect} from 'react-redux';
 import Form from '../form/Form';
 import styles from './LoginModal.module.css';
 
@@ -33,7 +34,7 @@ const LoginModal = (props) => {
         }
     });
 
-      if (!props.isOpenLogin) {
+      if (!props.isOpenLogin || props.authenticated) {
         return null;
       } 
      
@@ -73,4 +74,7 @@ const LoginModal = (props) => {
     )
 }
 
-export default LoginModal;
+const mapStateToProps=({authenticated})=>({
+  authenticated
+})
+export default connect(mapStateToProps)(LoginModal);
