@@ -117,4 +117,10 @@ margin-top: 20px;
         left: 90%;
     }
 }
+
+@media (min-width: 1280px) {
+    .headerRectangle{
+            left: 19%;
+    }
+}
   

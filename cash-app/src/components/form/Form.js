@@ -17,21 +17,38 @@ const Form = (props) => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
+  console.log(props.formName)
+  const onClose = (e) => {
+    props.onClose && props.onClose(e);
+    document.body.style.overflow = "initial";
+    document.body.style.position = "initial";
+   if(props.formName === "Login" ){
+    login()
+   
+   }    
+    if (props.formName === "Register" ){
+     e.preventDefault();
+    register()
+   }
+  };
+
   async function register() {
     // const URL='http://localhost:3000'
     props.registerRequest();
     try {
-      await axios({
+      const response = await axios({
         method: "POST",
         url: "http://localhost:3000/register",
         data: { email, password, name },
       })
-        .then((res) => {
-          props.registerSuccess(res.data.ResponseBody);
-        })
-        .catch((err) => props.registerError(err));
+      props.registerSuccess(response.data.ResponseBody);
     } catch (error) {
-      console.log(error);
+      props.registerError((error.response.data.ResponseBody.errors));
+      if(error.response.status===422){
+        error.response.data.ResponseBody.errors.map(el=>{console.log(el)})
+        // alert(`${error.response.data.ResponseBody.errors.context} is missing! `)
+        
+      }
     }
   }
 
@@ -86,10 +103,7 @@ const Form = (props) => {
          <button
         className={styles.modalSubmitBtn}
         type="submit"
-        onClick={(e) => {
-          e.preventDefault();
-          register();
-        }}
+        onClick={onClose}
       >
         {/* {props.formName} */}
         Register
@@ -100,10 +114,7 @@ const Form = (props) => {
       <button
         className={styles.modalSubmitBtn}
         type="submit"
-        onClick={(e) => {
-          e.preventDefault();
-          login();
-        }}
+        onClick={onClose}
       >
         Login
         {/* {props.formName} */}

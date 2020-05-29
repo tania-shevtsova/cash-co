@@ -6,6 +6,7 @@ import { logout } from "../../redux/actions";
 import axios from "axios";
 import RegisterModal from "../registerModal/RegisterModal";
 import LoginModal from "../loginModal/LoginModal";
+import Form from '../form/Form';
 
 const Navbar = (props) => {
   const [isOpen, setOpen] = useState(false);
@@ -24,6 +25,13 @@ const Navbar = (props) => {
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
   };
+
+  const close=(e)=>{
+    e.preventDefault();
+    setOpenLogin(false);
+    document.body.style.overflow = "initial";
+    document.body.style.position = "initial";
+  }
 
   async function logout() {
 
@@ -96,10 +104,13 @@ const Navbar = (props) => {
           </button>
         </>
       )}
-      {isOpen && <RegisterModal isOpen={isOpen} onClose={handleOpen} />}
+      {isOpen&& <><RegisterModal isOpen={isOpen} onClose={handleOpen}/><Form isOpen={isOpen} onClose={handleOpen} formName="Register"/> </>}
       {isOpenLogin && (
-        <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin} />
+        <>
+        <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin}/><Form isOpenLogin={isOpenLogin} onClose={handleOpenLogin} formName="Login"/></>
       )}
+
+      {/* {props.authenticated &&  <LoginModal style={{display: 'none'}} isOpenLogin={false} onClose={close} />} */}
 
 {/* {console.log(isOpenLogin)}
       {props.authenticated && <RegisterModal isOpen={false} onClose={handleOpen} />}

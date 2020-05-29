@@ -170,3 +170,9 @@
         font-family: "OpenSans-Bold";
     }
 }
+
+@media (min-width: 1280px) {
+    .footerBottom {
+        width: 1280px;
+    }
+}

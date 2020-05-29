@@ -34,7 +34,8 @@ const LoginModal = (props) => {
         }
     });
 
-      if (!props.isOpenLogin || props.authenticated) {
+      if (!props.isOpenLogin) {
+      
         return null;
       } 
      
@@ -68,7 +69,7 @@ const LoginModal = (props) => {
               </g>
             </svg>
           </div>
-          <Form formName="Login" />
+          {/* <Form formName="Login" /> */}
         </div>
       </>
     )

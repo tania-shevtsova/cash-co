@@ -250,3 +250,12 @@
     top: 78.8%;
   }
 }
+
+@media (min-width: 1280px) {
+  .serviceBack {
+    width: 1280px;
+    margin-left: -80px;
+    height: 880px;
+    /* margin-top: -8%; */
+  }
+}

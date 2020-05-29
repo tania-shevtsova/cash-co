@@ -136,6 +136,12 @@ img {
 }
 }
 
+@media (min-width: 1280px) {
+.footer::before {
+  width: 1280px;
+}
+}
+
 #App {
   font-family: sans-serif;
 

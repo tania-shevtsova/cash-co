@@ -32,9 +32,7 @@ useEffect(()=>{
     }
 })
 
-  if (!props.isOpen || props.authenticated) {
-    document.body.style.overflow = "initial";
-    document.body.style.position = "initial";
+  if (!props.isOpen) {
     return null;
   } else {
     return (
@@ -67,7 +65,7 @@ useEffect(()=>{
               </g>
             </svg>
           </div>
-         <Form formName="Register"/>
+         {/* <Form formName="Register"/> */}
         </div>
       </>
     );
