@@ -1,5 +1,9 @@
 .formError {
-    width: 40px;
-    height: 10px;
-    color: red;
+    width: 100px;
+    position: absolute;
+    height: 50px;
+    background-color: red;
+    z-index: 999999999999999999999999999999999999;
+    top: 260%;
+    left: 70%;
 }

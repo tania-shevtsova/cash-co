@@ -43,9 +43,7 @@ const error=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_ERROR:
         case Types.REGISTER_ERROR:
-            console.log(action.payload.error)
             return  action.payload.error; 
-            // action.payload.error;
 
             default: 
             return state;
