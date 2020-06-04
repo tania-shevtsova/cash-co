@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
-import useStateWithCallback from 'use-state-with-callback';
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import styles from "./Form.module.css";
-import FormError from '../formError/FormError';
-import HomePage from '../../pages/HomePage'
 import {
   registerRequest,
   registerSuccess,
@@ -14,16 +11,10 @@ import {
   loginSuccess,
   loginError
 } from "../../redux/actions";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-//   import PNotify_1 from "pnotify/dist/es/PNotify";
-// import PNotifyMobile from "pnotify/dist/es/PNotifyMobile";
-//   import '@pnotify/core/dist/BrightTheme.css';
-  import { info } from "@pnotify/core";
+import { error, defaultModules } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
-import * as Confirm from "@pnotify/confirm";
-import "@pnotify/confirm/dist/PNotifyConfirm.css";
+import * as PNotifyMobile from '@pnotify/mobile';
 
 const Form = (props) => {
   const [email, setEmail] = useState("");
@@ -34,32 +25,6 @@ const Form = (props) => {
   const [passwordValid, setPasswordValid]=useState(false);
   const [nameValid, setNameValid]=useState(false);
   const [formValid, setFormValid]=useState(false);
-  const [isConflict, setIsConflict]=useState(false);
-
-  const onClose = async (e) => {
-    //  if(isConflict){
-    //   console.log('isConflict11111', isConflict)
-    //   return;
-    // } else {
-    //   console.log('hereeee')
-    // props.onClose && props.onClose(e);
-    // document.body.style.overflow = "initial";
-    // document.body.style.position = "initial";
-    
-    
-    // if (props.formName === "Register"){
-    //   e.preventDefault();
-    //   await register(e);
-    // }
-
-      
-  
-          //   if(props.formName === "Login"){
-          //  login()
-          //   }
-  
-   
-  };
  
   const handleEmailInput=(e)=>{
   //   const validEmailRegex = 
@@ -155,72 +120,6 @@ validateField(name, e.target.value)
   //   setFormValid(emailValid && passwordValid && nameValid);
   // }
 
-
-  useEffect(()=>{
-    // const abort=new AbortController()
-    // setTimeout(()=>{
-
-  
-    if(props.state.error!==null){
-      // setTimeout(()=>{
-
-
-        setIsConflict({isConflict: true})
-        console.log('thiiiiis!!!', props.state.error)
-      // }, 1000)
-    }
-  // }, 1000)
-    // function a(){
-    //   setIsConflict(!isConflict)
-    // setTimeout(()=>{
-
-    //   if(props.state.error === null){
-    //     setIsConflict(!isConflict)
-    //     console.log('hello')
-    //     console.log('not null', props.state.error)
-    //   }
-    // }, 1000)
-    // setIsConflict(!isConflict)
-    // if(props.state.error !== null){
-    //   setIsConflict(!isConflict)
-    //   console.log('not null', props.state.error)
-    // }
-
-    // function a(){
-    //    const timer = setTimeout(() => {
-    //     if(props.state.error!==null){
-    //         setIsConflict(!isConflict)
-    //        console.log('not null', props.state.error)
-    //     }
-    //     // else{
-    //     //   console.log(props.state.error)
-    //     //    setIsConflict(isConflict)
-    //     // }
-        
-    //   });
-    //   return () =>{ clearTimeout(timer)};
-      // if(props.state.error !== null && props.state.error.length>0){
-      //   setIsConflict(!isConflict);
-      //   console.log('not null')
-      // }
-      // console.log('just', props.state.error)
-
-    
-      // const timer = setTimeout(() => {
-      //     setIsConflict(!isConflict)
-      //     console.log('not null', props.state.error)
-        
-      // });
-      // return () =>{ clearTimeout(timer)};
-
-     
-    
-  // }
-  // a()
-    // return () => {abort.abort()}
-    
-  }, [props.state.error])
-
   async function register(e) {
     // const URL='http://localhost:3000'
     e.preventDefault();
@@ -232,78 +131,41 @@ validateField(name, e.target.value)
         data: { email, password, name },
       })
       props.registerSuccess(response.data.ResponseBody);
-      //  setIsConflict(!isConflict)
-       console.log('hereeee');
-       console.log('isConflict11111', isConflict)
+      console.log('USER2', response.data)
        props.onClose && props.onClose(e);
        document.body.style.overflow = "initial";
        document.body.style.position = "initial";
-       props.history.replace('/')
+       return 
      
-    } catch (error) {
-      await props.registerError(error.response.data.ResponseBody);
-      console.log('now', props.state.error)
-      console.log('tt', isConflict)
-      if(error.response.status===409){
-         alert(`${error.response.data.ResponseBody}`)
+    } catch (err) {
+      await props.registerError(err.response.data.ResponseBody);
+      if(err.response.status===409){
+        error({
+          title: false,
+          delay: 3000,
+          text:
+            `${err.response.data.ResponseBody}`,
+            modules: new Map([
+              ...defaultModules,
+              [PNotifyMobile, {
+                swipeDismiss: true
+              }]
+            ])
+        });
     }
       return;
-
-//       if(props.state.error !==null) {
-// console.log('true')
-      
-      setTimeout(()=>{
-
-         if(error.response.status===409){
-       
-            // setIsConflict(!isConflict)
-             alert(`${error.response.data.ResponseBody}`)
-        }
+    }
     
-      }, 1000)
-    }
-     
-      //   PNotify_1.error({
-      //     text: `${error.response.data.ResponseBody}`,
-      //     modules: {
-      //       Mobile: {
-      //         swipeDismiss: true,
-      //         styling: true
-      //       },
-      //       Desktop: {
-      //         desktop: false,
-      //         fallback: true,
-      //     }
-      //   }
-      // });
-
-      // info({
-      //   title: "Button Clicked",
-      //   text:
-      //     "You have clicked the button. You may now complete the process of reading the notice.",
-      //   modules: new Map([
-      //     [
-      //       Confirm,
-      //       {
-      //         confirm: true,
-      //         buttons: [
-      //           {
-      //             text: "Ok",
-      //             primary: true,
-      //             click: notice => {
-      //               notice.close();
-      //             }
-      //           }
-      //         ]
-      //       }
-      //     ]
-      //   ])
-      // });
-        // alert(`${error.response.data.ResponseBody.errors.context} is missing! `)
-        
-      // }
     }
 
+    useEffect(() => {
+      function a(){
+        if(props.state.user !== null && props.state.user.registered){
+          console.log('hey')
+        }
+      }
+      a()
+    }, [props.state.user])
   
   
   async function login(e) {
@@ -329,8 +191,6 @@ validateField(name, e.target.value)
 
   return (
     <>
-    {/* <div><FormError formErrors={formErrors}/></div>
-    {console.log('Form', formErrors)} */}
     <form className={styles.modalForm}>
       <input
         value={email}
@@ -379,7 +239,7 @@ validateField(name, e.target.value)
       <button
         className={styles.modalSubmitBtn}
         type="submit"
-        onClick={onClose}
+        onClick={login}
       >
         Login
         {/* {props.formName} */}
@@ -389,26 +249,6 @@ validateField(name, e.target.value)
   </>
   );
 };
-
-// function useStateCallback(initialState) {
-//   const [isConflict, setIsConflict] = useState(initialState);
-//   const cbRef = useRef(null); // mutable ref to store current callback
-
-//   const setStateCallback = (isConflict, cb) => {
-//     cbRef.current = cb; // store passed callback to ref
-//    setIsConflict(isConflict);
-//   };
-
-//   useEffect(() => {
-//     // cb.current is `null` on initial render, so we only execute cb on state *updates*
-//     if (cbRef.current) {
-//       cbRef.current(isConflict);
-//       cbRef.current = null; // reset callback after execution
-//     }
-//   }, [isConflict]);
-
-//   return [isConflict, setStateCallback];
-// }
 
 const mapStateToProps = (state) => ({
   state,

@@ -26,13 +26,6 @@ const Navbar = (props) => {
     document.body.style.position = "fixed";
   };
 
-  const close=(e)=>{
-    e.preventDefault();
-    setOpenLogin(false);
-    document.body.style.overflow = "initial";
-    document.body.style.position = "initial";
-  }
-
   async function logout() {
 
     // const URL='http://localhost:3000'
@@ -109,12 +102,6 @@ const Navbar = (props) => {
         <>
         <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin}/><Form isOpenLogin={isOpenLogin} onClose={handleOpenLogin} formName="Login"/></>
       )}
-
-      {/* {props.authenticated &&  <LoginModal style={{display: 'none'}} isOpenLogin={false} onClose={close} />} */}
-
-{/* {console.log(isOpenLogin)}
-      {props.authenticated && <RegisterModal isOpen={false} onClose={handleOpen} />}
-      {props.authenticated && <LoginModal isOpenLogin={isOpenLogin} onClose={()=>setOpenLogin(false)} />} */}
     </nav>
   );
 };

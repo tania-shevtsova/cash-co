@@ -5,7 +5,6 @@ const user=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
         case Types.REGISTER_SUCCESS:
-            console.log('USER', action.payload.data)
             return action.payload.data;
 
             case Types.LOGOUT:
