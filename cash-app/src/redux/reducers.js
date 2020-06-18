@@ -18,6 +18,7 @@ const authenticated=(state=false, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
         case Types.REGISTER_SUCCESS:
+            case Types.FORGOT_PASSWORD:
             return true;
             case Types.LOGOUT:
                 return false;
@@ -26,7 +27,7 @@ const authenticated=(state=false, action)=>{
     }
 }
 
-const token=(state=null, action)=>{
+ const token=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
             return action.payload.data.token;
@@ -42,6 +43,7 @@ const error=(state=null, action)=>{
     switch(action.type){
         case Types.LOGIN_ERROR:
         case Types.REGISTER_ERROR:
+            case Types.FORGOT_PASSWORD_ERROR:
             return  action.payload.error; 
 
             default: 

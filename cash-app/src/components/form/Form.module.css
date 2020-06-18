@@ -10,6 +10,10 @@
     margin-bottom: 15px;
   }
 
+  .modalInput1:not(:last-child){
+    margin-bottom: 25px;
+  }
+
 
   .modalSubmitBtn{
     border-radius: 3px;
@@ -29,7 +33,7 @@
   z-index: 999999999999999 !important;
   left: 37.6%;
   
-  margin-top: 20%;
+  margin-top: 24%;
 }
 
 .closeBtn {
@@ -39,6 +43,42 @@
   fill: red;
   position: absolute;
   z-index: 9999999999999999 !important;
-
   transform: rotate(180deg);
+}
+
+.errorsEmail{
+  position: absolute;
+  z-index: 999999999999999999999 !important;
+  color: red;
+  font-size: 12px !important;
+  top: 45px;
+}
+
+.errorsPass{
+  position: absolute;
+  z-index: 999999999999999999999 !important;
+  color: red;
+  font-size: 12px !important;
+  top: 110px;
+}
+
+.errorsName {
+  position: absolute;
+  z-index: 999999999999999999999 !important;
+  color: red;
+  font-size: 12px !important;
+  top: 175px;
+}
+
+.errors:nth-of-type(2){
+  top: 24px;
+}
+
+.errors:last-of-type(){
+  top: 36px;
+}
+
+.resetLink {
+  color: #f3b93e;
+  margin-top: 10px;
 }

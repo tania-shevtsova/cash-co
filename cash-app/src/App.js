@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {  withRouter } from "react-router-dom";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import  "./App.module.css";
-import HomePage from './pages/HomePage';
-// TODO CALL BACK ON THE SIDE, BUTTON CALL BACK SCROLLS TO THE BUTTON, SIGN IN SUGN UP INSTEAD OF NUMBER, PHONE NUMBER IN THE FOOTER
-function App({isAuth}) {
-  const docWidth = document.documentElement.offsetWidth;
 
+import HomePage from './pages/HomePage';
+import Verify from './components/Verify';
+
+  
+
+// TODO CALL BACK ON THE SIDE, BUTTON CALL BACK SCROLLS TO THE BUTTON, SIGN IN SUGN UP INSTEAD OF NUMBER, PHONE NUMBER IN THE FOOTER
+function App(props) {
+ 
+  const docWidth = document.documentElement.offsetWidth;
   
 [].forEach.call(
   document.querySelectorAll('*'),
@@ -18,9 +24,12 @@ function App({isAuth}) {
 // isAuth=true;
 //      if(!isAuth){
     return (
+      <>
         <Router>
-            <Route path='/' exact component={HomePage} />
+           <Route path='/' exact component={HomePage} />
+            <Route path='/:otpCode' exact component={Verify} />
         </Router>
+        </>
     )
 
 
@@ -59,7 +68,7 @@ function App({isAuth}) {
 
 }
 
-export default App;
+export default (withRouter(App));
 
 //TODO
 /*

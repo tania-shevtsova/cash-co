@@ -67,6 +67,8 @@
     <div id="root"></div>
     <div id="map"></div>
     <script>
+      // let reg=/http\:\/\/localhost\:3001/
+      if(window.location.href==='http://localhost:3001/'){
       const map = L.map("map").setView([50.39621, 30.48923], 13);
       L.tileLayer(
         "https://api.maptiler.com/maps/darkmatter/{z}/{x}/{y}.png?key=HtgFiSQcqlaIjj7ncVqI",
@@ -84,6 +86,7 @@
       marker.on("click", function (e) {
         map.setView(e.latlng, 20);
       });
+    }
     </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import styles from "./Navbar.module.css";
@@ -6,11 +6,25 @@ import { logout } from "../../redux/actions";
 import axios from "axios";
 import RegisterModal from "../registerModal/RegisterModal";
 import LoginModal from "../loginModal/LoginModal";
+import ResetPassword from '../resetPassword/ResetPassword'
 import Form from '../form/Form';
+import { success, defaultModules } from "@pnotify/core";
+import "@pnotify/core/dist/PNotify.css";
+import "@pnotify/core/dist/BrightTheme.css";
+import * as PNotifyMobile from '@pnotify/mobile';
+import { css } from "@emotion/core";
+import MoonLoader from "react-spinners/ClipLoader";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const Navbar = (props) => {
   const [isOpen, setOpen] = useState(false);
   const [isOpenLogin, setOpenLogin] = useState(false);
+  const [isConfirming, setConfirming]=useState(true);
 
   const handleOpen = (e) => {
     e.preventDefault();
@@ -26,8 +40,51 @@ const Navbar = (props) => {
     document.body.style.position = "fixed";
   };
 
-  async function logout() {
+  useEffect(()=>{
+    function a (){
 
+      console.log('props', props)
+    }
+    a()
+  })
+  // useEffect(() => {
+    
+  //  async function a  (){
+  //   let regex=/http\:\/\/localhost\:3000\/([1-9]\d*|0\d+)/;
+
+  //   //  console.log(props.location)
+  //     // const url='http://localhost:3001?otp=true';
+  //     // let regex=/\?otp=([0-9])/;
+  //     // /http\:\/\/localhost\:3001\?confirmed=(true)/;
+    
+  //     if(props.location.search.match(regex)){
+  //        await axios({
+  //         method: "GET",
+  //         url: `http://localhost:3000/${props.location.search}`
+  //       }).then(()=>{setConfirming(false); 
+  //         success({
+  //         title: false,
+  //         delay: 3000,
+  //         text: "Email is verified",
+  //         modules: new Map([
+  //           ...defaultModules,
+  //           [
+  //             PNotifyMobile,
+  //             {
+  //               swipeDismiss: true,
+  //             },
+  //           ],
+  //         ]),
+  //       });})
+        
+  //     }
+  //   return;
+      
+  //   }
+  //   a()
+  // }, []);
+
+  async function logout() {
     // const URL='http://localhost:3000'
     try {
       await axios({
@@ -48,6 +105,7 @@ const Navbar = (props) => {
   }
 
   return (
+  
     <nav className={styles.navbar}>
       <Link to="/" className={styles.logo}>
         <span className="logo">Cash $</span>
@@ -58,7 +116,10 @@ const Navbar = (props) => {
       <a className={styles.navLink}>Services</a>
       <a className={styles.navLink}>Prices</a>
       <a className={styles.navLink}>Contact</a>
-      {!props.authenticated ? (
+      {console.log('PROPSSS:', isConfirming)}
+    
+
+      {(!props.authenticated || props.token===null)&& (
         <>
           {" "}
           <button className={styles.navButton} onClick={handleOpenLogin}>
@@ -68,7 +129,24 @@ const Navbar = (props) => {
             Sign up
           </button>{" "}
         </>
-      ) : (
+      )}
+
+      {/* {(props.authenticated && props.token===null) &&
+       <>
+       {" "}
+       <button className={styles.navButton} onClick={handleOpenLogin}>
+         Sign in
+       </button>
+       <button className={styles.navButton} onClick={handleOpen}>
+         Sign up
+       </button>{" "}
+      { alert('Verification code was sent to your email!')}
+     </>} */}
+
+
+    
+      
+      {(props.authenticated && props.token!==null ) &&  (
         <>
           <div style={{ display: "none" }}>
             Icons made by{" "}
@@ -98,10 +176,11 @@ const Navbar = (props) => {
         </>
       )}
       {isOpen&& <><RegisterModal isOpen={isOpen} onClose={handleOpen}/><Form isOpen={isOpen} onClose={handleOpen} formName="Register"/> </>}
-      {isOpenLogin && (
+      {(isOpenLogin) && (
         <>
         <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin}/><Form isOpenLogin={isOpenLogin} onClose={handleOpenLogin} formName="Login"/></>
       )}
+      {/* {isRegistered && (<> <LoginModal isOpenLogin={isOpenLogin} onClose={handleOpenLogin}/></>)} */}
     </nav>
   );
 };

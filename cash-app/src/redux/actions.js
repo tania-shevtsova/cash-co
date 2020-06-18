@@ -20,6 +20,20 @@ export const registerError =(error)=>{
     }
 }
 
+export const forgotPassword=(data)=>{
+    return {
+            type: Types.FORGOT_PASSWORD,
+            payload: {data}
+    }
+}
+
+export const forgotPasswordError =(error)=>{
+    return {
+        type: Types.FORGOT_PASSWORD_ERROR,
+        payload: {error}
+    }
+}
+
 export const loginRequest = () =>{
     return {
         type: Types.LOGIN_REQUEST

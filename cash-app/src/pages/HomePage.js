@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Navbar from "../components/navbar/Navbar";
 // import styles from "../App.module.css";
 import Header from "../components/header/Header";
@@ -7,11 +7,31 @@ import Services from '../components/services/Services';
 import Footer from "../components/footer/Footer";
 import Projects from '../components/projects/Projects';
 import Service from '../components/service/Service';
-import styles from './HomePage.module.css'
+import styles from './HomePage.module.css';
+import { css } from "@emotion/core";
+import MoonLoader from "react-spinners/ClipLoader";
 
-const HomePage = () => {
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
+const HomePage = (props) => {
+  const [isLoading, setLoading]=useState(true)
+  useEffect(()=>{
+    console.log('propsss', props)
+    setLoading(false)
+  })
     return (
       <>
+      {isLoading ?  
+      <MoonLoader
+      css={override}
+      size={150}
+      color={"#123abc"}/> : 
+        
+          <>
         <div className={styles.background}>
           <div className={styles.layer}></div>
           <div className={styles.wrapper}>
@@ -38,6 +58,7 @@ const HomePage = () => {
         <footer className={styles.footer}>
         <Footer/>
         </footer>
+        </>}
       </>
     )
 }
