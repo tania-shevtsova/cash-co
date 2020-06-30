@@ -345,7 +345,6 @@ const Form = (props) => {
                 : 'Register'}
               {/* {props.formName} */}
             </button>
-            <a className={styles.resetLink}>Forgot Password?</a>
           </>
         )}
 

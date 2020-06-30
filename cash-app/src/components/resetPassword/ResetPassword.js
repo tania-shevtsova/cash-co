@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import {connect} from 'react-redux';
 import axios from 'axios';
 import styles from "./ResetPassword.module.css";
-import {forgotPassword, forgotPasswordError} from '../../redux/actions'
+import {forgotPassword, forgotPasswordError, forgotPasswordRequest} from '../../redux/actions'
+
 
 const ResetPassword = (props) => {
   const [email, setEmail] = useState("");
@@ -12,22 +13,29 @@ const ResetPassword = (props) => {
       setEmail(e.target.value)
   }
 
-  const sendEmail =async (e)=>{
+  async function sendEmail (e){
       e.preventDefault();
+      props.forgotPasswordRequest()
       if(email===''){
           setError(true)
       }
       else {
+        setError(false)
         try {
-            const response = await axios({
+             await axios({
               method: "POST",
               url: "http://localhost:3000/forgotPassword",
-              data: email ,
-            });
-            props.forgotPassword(response.data)
+              data: {email}
+            })
+            .then(async function(res){
+                await props.forgotPassword(res.data.ResponseBody.email)
+                console.log('forgot', res)
+            })
+            return
         }
-        catch(e){
-            console.log(e)
+        catch(err){
+            props.forgotPasswordError(err)
+            console.log(err)
         }
       }
   }
@@ -35,7 +43,6 @@ const ResetPassword = (props) => {
   return (
       
     <>
-    {console.log(props)}
       <input
         value={email}
         onChange={handleResetEmail}
@@ -45,12 +52,12 @@ const ResetPassword = (props) => {
         placeholder="Enter your email address to reset password"
       />
 
-{error && (<><p>That email address isn't recognized. Please try again or register for a new account.</p></>)}
+{error ? (<><p style={{color: 'red'}}>That email address isn't recognized. Please try again or register for a new account.</p></>): ''}
       <button
         className={styles.modalResetBtn}
         type="submit"
         onClick={sendEmail}
-        disabled={error}
+        // disabled={error}
       >
         Send Password Reset Email
       </button>
@@ -63,4 +70,4 @@ const mapStateToProps = (state) => ({
     state,
   });
 
-export default connect(mapStateToProps, {forgotPassword, forgotPasswordError})(ResetPassword);
+export default connect(mapStateToProps, {forgotPassword, forgotPasswordError, forgotPasswordRequest})(ResetPassword);

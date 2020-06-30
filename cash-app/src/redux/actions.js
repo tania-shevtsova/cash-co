@@ -20,6 +20,12 @@ export const registerError =(error)=>{
     }
 }
 
+export const forgotPasswordRequest = () =>{
+    return {
+        type: Types.FORGOT_PASSWORD_REQUEST
+    }
+}
+
 export const forgotPassword=(data)=>{
     return {
             type: Types.FORGOT_PASSWORD,

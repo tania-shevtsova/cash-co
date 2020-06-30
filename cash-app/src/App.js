@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import {  withRouter } from "react-router-dom";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import  "./App.module.css";
-
 import HomePage from './pages/HomePage';
 import Verify from './components/Verify';
+import ResetComponent from './components/reset/ResetComponent'
 
   
 
@@ -28,6 +28,7 @@ function App(props) {
         <Router>
            <Route path='/' exact component={HomePage} />
             <Route path='/:otpCode' exact component={Verify} />
+            <Route path='/reset/:token' exact component={ResetComponent}/>
         </Router>
         </>
     )

@@ -23,12 +23,6 @@ const Verify = (props) => {
     useEffect(() => {
         async function a (){
           let regex=/\/([1-9]\d*|0\d+)/;
-          // const url='http://localhost:3001/?otp=356194&confirmed=true';
-          // let regex=/http\:\/\/localhost\:3001\/\?otp=([0-9]*)\&confirmed=(true)/;
-         
-          console.log('regex', regex);
-          console.log('props.location.pathname', props.location.pathname)
-          console.log('LOC', props.location.pathname.match(regex[0]))
     
           if(props.location.pathname.match(regex[0])){
             await axios({

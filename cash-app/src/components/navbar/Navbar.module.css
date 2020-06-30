@@ -98,9 +98,8 @@ z-index: 11 !important;
   @media (min-width: 1024px){
     .navbar::after{
         content: "";
-        display: block;
             width: 1024px;
-            margin-left: -18%;
+            margin-left: -28%;
     }
   }
   

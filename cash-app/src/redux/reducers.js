@@ -18,10 +18,19 @@ const authenticated=(state=false, action)=>{
     switch(action.type){
         case Types.LOGIN_SUCCESS:
         case Types.REGISTER_SUCCESS:
-            case Types.FORGOT_PASSWORD:
             return true;
             case Types.LOGOUT:
                 return false;
+            default:
+                return state;
+    }
+}
+
+const email=(state=null, action)=>{
+    switch(action.type){
+        case Types.FORGOT_PASSWORD:
+            return action.payload;
+
             default:
                 return state;
     }
@@ -54,6 +63,7 @@ const error=(state=null, action)=>{
 export default combineReducers({
     user,
     authenticated,
+    email,
     token,
     error
 })
