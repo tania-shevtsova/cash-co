@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Service.module.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Service = () => {
+      useEffect(()=>{
+          AOS.init();
+        }, []);
   return (
     <div className={styles.serviceBack}>
-      <div className={styles.serviceWrapper}>
+      <div className={styles.serviceWrapper}  data-aos="fade-up" data-aos-duration="1000">
         <div className={styles.serviceHead}>
           <h3 className={styles.serviceHeader}>Service Certified</h3>
           <span className={styles.serviceDesc}>

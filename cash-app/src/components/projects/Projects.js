@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Projects.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = () => {
+    useEffect(()=>{
+        AOS.init();
+      }, []);
     return (
         <>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} data-aos="fade-up" data-aos-duration="1000">
         <h3 className={styles.projectHeader}>Projects</h3>
             <span className={styles.rect}></span>
             <span className={styles.projectImg}></span>

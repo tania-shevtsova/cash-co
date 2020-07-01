@@ -3,8 +3,14 @@ import styles from "./Footer.module.css";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
+
+  useEffect(()=>{
+    AOS.init();
+  }, []);
   // const [phone, setPhone]=useState('');
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
@@ -90,7 +96,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className={styles.footerWrapper}>
+      <div className={styles.footerWrapper} data-aos="fade-up" data-aos-duration="1000">
         <span className={styles.footerHeader}>
           Having problems with your car?
         </span>

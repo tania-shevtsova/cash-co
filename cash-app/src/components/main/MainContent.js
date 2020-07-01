@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './MainContent.module.css';
 
 const MainContent = () => {
     return (
-        <div className={styles.mainContentWrapper}>
+        <div className={styles.mainContentWrapper} >
         <div className={styles.mainContent}>
          <ul className={styles.listContent}>
           <li className={styles.icon1}>

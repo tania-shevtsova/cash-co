@@ -10,6 +10,12 @@ import Service from '../components/service/Service';
 import styles from './HomePage.module.css';
 import { css } from "@emotion/core";
 import MoonLoader from "react-spinners/ClipLoader";
+import OnlineButton from '../components/onlineButton/OnlineButton';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const override = css`
   display: block;
@@ -21,8 +27,16 @@ const HomePage = (props) => {
   const [isLoading, setLoading]=useState(true)
   useEffect(()=>{
     console.log('propsss', props)
-    setLoading(false)
+    setLoading(false);
+
+   
   })
+
+  useEffect(()=>{
+    AOS.init();
+  }, []);
+
+  
     return (
       <>
       {isLoading ?  
@@ -32,9 +46,10 @@ const HomePage = (props) => {
       color={"#123abc"}/> : 
         
           <>
-        <div className={styles.background}>
+        <div className={styles.background} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.layer}></div>
           <div className={styles.wrapper}>
+          <OnlineButton/>
             <section className={styles.headerSection}>
               <Navbar />
               <Header />

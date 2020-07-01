@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Services.module.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const Services = () => {
+    useEffect(()=>{
+      AOS.init();
+    }, []);
   return (
-    <>
+    <div data-aos="fade-up" data-aos-duration="1000">
     <span className={styles.servicesBefore}></span>
       <h2 className={styles.servicesHeader}>Services</h2>
       <span className={styles.servicesAbout}>
@@ -26,7 +33,7 @@ const Services = () => {
         </li>
       </ul>
       <span className={styles.servicesAfter}></span>
-    </>
+    </div>
   );
 };
 
